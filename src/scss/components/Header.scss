@@ -1,0 +1,108 @@
+@import "../partials/variables";
+@import '../common/layout.scss';
+@import '../common/mixin.scss';
+
+.container-header {
+    background-color: $primary-brand;
+}
+
+.max-width-header {
+    color: $white-color;
+    margin: 0 auto;
+    max-width: 100%;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 15px;
+}
+
+.venia {
+    // padding-top: 12px;
+
+    .decorationNone {
+        color: $white-color;
+    }
+
+    .logo {
+        @include venialogo;
+        margin-top: 20px;
+    }
+}
+
+//  Header Labels sass
+
+.header_text {
+    font-family: Mulish;
+    display: flex;
+    justify-content: center;
+    // padding-top: 14px;
+    font-size: 15px;
+
+    ul {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    li {
+        line-height: inherit;
+    }
+
+    .text1 {
+        @include texts;
+        text-align: left;
+
+    }
+
+    .text2 {
+        @include texts
+    }
+
+    .text3 {
+        @include texts
+    }
+
+    .text4 {
+        @include texts
+    }
+}
+
+.header_icons {
+    font-family: Mulish;
+    text-align: end;
+    // padding-top: 16px;
+
+    ul {
+        display: flex;
+        justify-content: right;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    li {
+        line-height: inherit;
+    }
+
+    .text5 {
+        @include textss;
+    }
+
+    .text6 {
+        @include textss;
+    }
+}
+
+.cart-count {
+    width: 20px;
+    position: absolute;
+    background: $primary-M1;
+    height: 20px;
+    text-align: center;
+    color: white;
+    border-radius: 8px;
+    margin-top: -5px;
+    margin-left: 1px;
+}

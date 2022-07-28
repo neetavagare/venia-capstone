@@ -1,0 +1,14 @@
+@import '../partials/variables';
+@import '../common/mixin.scss';
+
+
+.banner{
+    @include headingsize;
+}
+
+.dotborder{
+    border-bottom: 7px solid $primary-brand;
+    margin-bottom: 20px !important;
+    margin: 0 auto;
+    width: 10%;
+}

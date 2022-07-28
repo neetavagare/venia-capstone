@@ -1,0 +1,154 @@
+@import '../partials/variables';
+@import '../common/mixin.scss';
+
+.cart-container {
+    margin-bottom: 30px;
+
+    .img_box img {
+        width: 90%;
+    }
+
+    .button-spacer {
+        margin-top: 5px;
+        margin-left: 50px;
+    }
+
+    .remove-btn {
+        cursor: pointer;
+    }
+
+    .details {
+        font-family: Mulish;
+        color: $unnamed-color;
+
+        .title-link {
+            text-decoration: none;
+        }
+
+        .title {
+            @include ptitle;
+            font-weight: bold;
+            font-size: 20px;
+            margin: 0px 0px 10px 0px;
+        }
+
+        .size {
+            font-size: 16px;
+            margin: 0px 0px 10px 0px;
+        }
+
+        .color {
+            font-size: 16px;
+            margin: 0px 0px 10px 0px;
+        }
+
+        .price {
+            font-size: 16px;
+            margin: 0px 0px 10px 0px;
+        }
+    }
+
+    .cart_button {
+        padding-top: 50px;
+        padding-left: 50px;
+
+        .circle {
+            vertical-align: middle;
+        }
+    }
+
+    .trashIcon {
+        padding-top: 30px;
+    }
+
+    .trash {
+        padding-bottom: 10px;
+        padding-left: 10px;
+        font-size: 12px;
+        vertical-align: text-top;
+
+    }
+
+    .edit2 {
+        margin-bottom: 10px;
+        font-size: 12px;
+    }
+
+}
+
+.pricingSection {
+    border: 1px solid $white-color;
+    border-radius: 2px;
+    box-shadow: 0 0 6px $border-color;
+    padding: 20px;
+    @include ptitle;
+
+    .pricingtext {
+        font-size: 20px;
+    }
+
+    .subtotal {
+        @include pricingpadding;
+    }
+
+    .coupen {
+        @include pricingpadding;
+    }
+
+    .gift {
+        @include pricingpadding;
+    }
+
+    .tax {
+        @include pricingpadding;
+    }
+
+    .shhipping {
+        @include pricingpadding;
+    }
+
+    .total {
+        @include pricingpadding;
+        @include boldFont
+    }
+
+    .pricing {
+        text-align: end;
+    }
+
+    .textAlignCenter {
+        @include textCenter;
+    }
+
+    .lock {
+        color: $white-color;
+    }
+
+    .checkoutbtn {
+        margin-top: 10px;
+        text-align: center;
+        color: $white-color;
+        text-transform: uppercase;
+        font-size: 14px;
+        padding: 8px;
+        width: 80%;
+        @include cursor;
+        border: none;
+        border-radius: 28px;
+        background-color: $primary-brand;
+    }
+
+    .paypal-exp {
+        margin-top: 20px;
+        width: 80%;
+        border: none;
+        padding: 0;
+        background: transparent;
+        @include cursor;
+
+        .paypalbtn {
+            width: 100%;
+        }
+    }
+
+}

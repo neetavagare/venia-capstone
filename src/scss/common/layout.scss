@@ -1,0 +1,339 @@
+@import './mixin.scss';
+@import '../partials/variables.scss';
+@import './extend.scss';
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    @include layout;
+}
+
+.page-container {
+    @include layout;
+}
+
+.product-container {
+    padding-left: 190px;
+    padding-right: 190px;
+}
+
+.boximage {
+    display: block;
+}
+
+.mobileHide {
+    display: block;
+}
+
+.image {
+    display: block;
+}
+
+.button {
+    display: block;
+}
+
+.deskTopHide {
+    display: none;
+}
+
+.mobileHideInline {
+    display: inline;
+}
+
+.decorationNone {
+    text-decoration: none;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.text-decoration {
+    text-decoration: none;
+    color: $unnamed-color;
+}
+
+/* Phone Breakpine*/
+@media (max-width: 768px) {
+
+    .catagories {
+        padding-left: 0;
+    }
+
+    .product-container,
+    .container {
+        padding: 0;
+        margin: 0;
+    }
+
+    .mobile-container,
+    .page-container {
+        margin: 0 10px;
+        padding: 0;
+    }
+
+    .precaution {
+        text-align: center;
+    }
+
+    .estimate {
+        width: 100% !important;
+    }
+
+    .mobileHide {
+        display: none;
+    }
+
+    .boximg {
+        display: block;
+
+        .mobileHide {
+            display: none;
+        }
+    }
+
+    .deskTopHide {
+        display: block;
+    }
+
+    .mobileheader {
+        @include headfootborder;
+        background: $primary-brand 0 0 no-repeat padding-box;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        display: flex;
+        align-items: center;
+        height: 50px;
+
+        .align-center {
+            text-align: center;
+        }
+
+        .menu {
+            padding-left: 10px;
+        }
+
+        .mobilevenia {
+            @include venialogo;
+            text-decoration: none;
+            color: $white-color;
+        }
+    }
+
+    .button {
+        margin-right: 30px;
+        float: right;
+        padding: 0px !important;
+    }
+
+    .mobileHideInline {
+        display: none;
+    }
+
+    .Productdetails {
+        .detailimage {
+            width: 100% !important;
+        }
+
+        .paddingTop15 {
+            padding-right: 0px;
+        }
+
+        .quanrbtn {
+            width: 149px;
+        }
+
+        .shopbagicon {
+            text-decoration: none;
+        }
+    }
+
+    .results {
+        @include ptitle;
+        text-align: center;
+        font-size: 16px;
+    }
+
+    .incrementbtn {
+        text-align: center;
+    }
+
+    .addtocartbtn {
+        text-align: center;
+    }
+
+    .svgicontext {
+        text-align: center;
+        padding: 0 !important;
+    }
+
+    .mobile-text-align-center {
+        text-align: center;
+    }
+
+    .sectionender {
+        background-color: $primary-brand;
+        margin-top: 40px;
+        margin-left: 153px;
+        height: 8px;
+        width: 102px;
+    }
+
+    .dotborder {
+        width: 20%;
+    }
+
+    .footer-bottom {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        text-align: center;
+        padding: 32px 0 42px 0;
+
+        .copyright {
+            padding: 25px 0 38px 0;
+        }
+
+        .left-nav {
+            padding-top: 34px;
+
+            ul {
+                text-align: center;
+                display: flex;
+                padding: 0 20%;
+
+            }
+
+        }
+    }
+
+    .home-product-container {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .adventure-img {
+        flex-direction: column;
+        padding: 0 !important;
+    }
+
+    .home-container {
+        @include mobile-padding;
+    }
+
+    .take-of-section {
+        @include mobile-padding;
+    }
+
+    .adventure-container {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .adventure-content {
+        width: 84% !important;
+        margin-top: -30px;
+    }
+
+    .location-icon-container {
+        margin-left: 11% !important;
+    }
+
+    .adventure-sub-content {
+        .hide {
+            display: none;
+        }
+
+    }
+
+    .field .country-dropdown,
+    .state-dropdown,
+    .email {
+        width: 100% !important;
+        border: 2px solid #B5B7BC;
+        border-radius: 8px;
+        height: 34px !important;
+    }
+
+    .mobile-container {
+        @include mobile-padding;
+    }
+
+    .mobile-spacing {
+        @include mobile-margin;
+    }
+
+    .mobile-field {
+        margin-bottom: 0 !important;
+    }
+
+    .checkoutend,
+    .address-section,
+    .name-section {
+        margin: 0 !important;
+    }
+
+    .zip {
+        width: 100% !important;
+        margin-left: 0 !important;
+    }
+
+    .btn-section {
+        text-align: center;
+
+        .mobile-continue-btn {
+            @include continuebtn-checkout;
+            width: 192px;
+            margin: auto;
+        }
+    }
+
+    .content-one {
+        @include cursor;
+        @include mobile-box;
+    }
+
+    .content-two {
+        @include cursor;
+        @include mobile-box;
+    }
+
+    .shipping-btn{
+        display: none !important;
+    }
+
+    .info-text{
+        margin: 0;
+    }
+
+    .field-edit{
+        display: block;
+    }
+}
+
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
+    .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .boximg .blackbox {
+        padding: 100px 36px;
+    }
+}
+
+@media (min-width: 2000px) {
+    .productItem {
+        .productMainImage {
+            height: auto;
+        }
+    }
+
+}
