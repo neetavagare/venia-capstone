@@ -76,8 +76,12 @@
 
 }
 
-.pricingSection {
-    border: 1px solid $white-color;
+.checkout-pricing-spacing{
+    margin-top: 75px;
+}
+
+.pricing-section {
+    border: 1px solid $border-color;
     border-radius: 2px;
     box-shadow: 0 0 6px $border-color;
     padding: 20px;

@@ -16,81 +16,6 @@
     }
 }
 
-.field {
-
-    .country-dropdown,
-    .state-dropdown,
-    .email {
-        @include input;
-    }
-
-    .country-dropdown {
-        height: 42px !important;
-    }
-
-    .contact-text {
-        @extend .semiboldmuli-family;
-        font-size: 20px;
-        margin: 12px 0;
-    }
-
-    .delivery-text {
-        @include ptitle;
-        font-size: 16px;
-        padding-bottom: 15px;
-    }
-
-    .text-shipping {
-        @extend .semiboldmuli-family;
-        font-size: 20px;
-        margin: 30px 0;
-    }
-
-    .country-dropdown {
-        @extend .semiboldmuli-family;
-        font-size: 14px;
-    }
-
-    .label {
-        margin-bottom: 5px;
-    }
-
-    .checkoutend {
-        @include field-spacing;
-        display: block;
-    }
-
-
-    .address-section {
-        @include field-spacing;
-    }
-
-    .name-section {
-        @include field-spacing;
-
-        .fname {
-            @include input;
-
-        }
-    }
-
-    .state-dropdown {
-        border: 2px solid $greyL2-color;
-        border-radius: 8px;
-        width: 100%;
-        height: 40px;
-        font-size: 16px;
-    }
-
-    .zip {
-        @include input;
-        width: 60%;
-        height: 35px;
-        margin-left: 15px;
-    }
-
-}
-
 .next-page {
     display: flex;
     justify-content: center;
@@ -103,9 +28,11 @@
 
 .sign-Section {
     @include ptitle;
-    border: 1px solid $border-color;
-    padding: 20px 10px;
+    padding: 18px;
     margin-bottom: 20px;
+    border: 1px solid $border-color;
+    border-radius: 2px;
+    box-shadow: 0 0 6px $border-color;
 
     .signin-text {
         font-size: 20px;
@@ -119,15 +46,31 @@
         background-color: $white-color;
         color: $primary-brand;
         padding: 9px 40px;
+
     }
+
+    // .country-dropdown{
+    // font-family: Muli, Regular;
+    // font-size: 14px;
+    //  background-color: $white-color;
+    //  color: $greyD2-color;
+    // }
+    // .state-dropdown {
+    //     background-color: $white-color;
+    //     color: $greyD2-color;
+    //     font-family: Muli, Regular;
+    //     font-size: 16px;
+    // }
 
 }
 
 .label {
     @extend .semiboldmuli-family;
     @extend .regularsize;
+    font-weight: bold;
     margin-bottom: 5px;
     display: block;
+    color: $greyD2-color;
 }
 
 .payment-section {
@@ -163,7 +106,8 @@
     .info-text {
         @extend .semiboldmuli-family;
         @extend .regularsize;
-        margin: 20px 20px;
+        margin: 0;
+        //margin: 20px 20px;
     }
 
     .field {
@@ -206,6 +150,29 @@
 
 .shipping-section {
 
+    .place-order-button-container {
+        text-align: center;
+
+        .place-order-button {
+            height: 40px;
+            width: 250px;
+            background-color: $primary-brand;
+            color: $white-color;
+            font-size: 14px;
+            border: none;
+            text-transform: uppercase;
+        }
+
+        .term-condition {
+            margin-top: 30px;
+
+            .text-decoration-underline {
+                text-decoration: underline !important;
+                color: blue;
+            }
+        }
+    }
+
     .shipping-tag {
         @include field-padding;
         @extend .semiboldmuli-family;
@@ -223,7 +190,12 @@
     .radio-one {
         margin-bottom: 15px;
 
+        .radio-align {
+            vertical-align: middle;
+        }
+
         .radiotext-one {
+            vertical-align: middle;
             @include radio-section;
         }
     }
@@ -231,7 +203,12 @@
     .radio-two {
         margin-bottom: 15px;
 
+        .radio-align {
+            vertical-align: middle;
+        }
+
         .radiotext-two {
+            vertical-align: middle;
             @include radio-section;
         }
     }
@@ -239,7 +216,12 @@
     .radio-three {
         margin-bottom: 15px;
 
+        .radio-align {
+            vertical-align: middle;
+        }
+
         .radiotext-three {
+            vertical-align: middle;
             @include radio-section;
         }
     }
@@ -265,9 +247,28 @@
     @include field-box;
 }
 
-.content-one{
-    padding-bottom: 20px;
+.shipping-info {
+    display: inline-block;
+    // margin: 0 20px;
+    width: 100%;
+
+    .content-one {
+        padding-bottom: 20px;
+        width: 30%;
+        display: inline-block;
+        color: $grey-D1;
+    }
+
+    .content-two {
+        padding-bottom: 20px;
+        width: 30%;
+        display: inline-block;
+        color: $grey-D1;
+    }
 }
+
+
+
 .field-edit {
     display: flex;
     justify-content: end;
@@ -289,20 +290,21 @@
 .estimating {
     margin-top: 35px;
 
-    .section2, .section1 {
+    .section2,
+    .section1 {
         @include ptitle;
         color: $shipping-color;
         padding: 20px 20px 20px 0;
         border-top: 1px solid $border-color;
     }
 
-    .section2{
+    .section2 {
         padding: 20px 20px 20px 0;
         border-bottom: 1px solid $border-color;
     }
 }
 
-.topbottom-border{
+.topbottom-border {
     @include ptitle;
     padding: 20px 20px 20px 0;
     border-top: 1px solid $border-color;
@@ -310,10 +312,22 @@
     margin-bottom: 20px;
 }
 
-.country-dropdown, .state-dropdown{
+.country-dropdown,
+.state-dropdown {
     background-color: $white-color;
 }
 
-.content-section{
+.content-section {
     width: 50%;
+}
+
+input[type="radio"] {
+    accent-color: #E26A2C;
+    height: 20px;
+    width: 20px;
+}
+
+input[type="checkbox"] {
+    accent-color: #E26A2C;
+    border: 2px solid #1F39FA;
 }

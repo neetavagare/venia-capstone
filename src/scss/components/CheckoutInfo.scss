@@ -1,0 +1,101 @@
+@import '../common/extend.scss';
+@import '../common/layout.scss';
+@import '../common//mixin.scss';
+@import '../partials/variables.scss';
+
+.field {
+
+    .country-dropdown {
+        @include input;
+        font-family: Muli, Regular;
+        font-size: 14px;
+        background-color: $white-color;
+        color: $greyD2-color;
+        height: 42px !important;
+    }
+
+    .state-dropdown {
+        @include input;
+        background-color: $white-color;
+        color: $greyD2-color;
+        font-family: Muli, Regular;
+        font-size: 16px;
+        width: 100%;
+        height: 42px !important;
+    }
+
+    .email {
+        @include input;
+    }
+
+    .country-dropdown {
+        height: 42px !important;
+    }
+
+    .contact-text {
+        @extend .semiboldmuli-family;
+        font-size: 20px;
+        margin: 12px 0;
+    }
+
+    .delivery-text {
+        @include ptitle;
+        font-size: 16px;
+        padding-bottom: 15px;
+    }
+
+    .text-shipping {
+        @extend .semiboldmuli-family;
+        font-size: 20px;
+        margin: 30px 0;
+    }
+
+    .country-dropdown {
+        @extend .semiboldmuli-family;
+        font-size: 14px;
+    }
+
+    .label {
+        margin-bottom: 8px;
+    }
+
+    .checkoutend {
+        @include field-spacing;
+        display: block;
+    }
+
+
+    .address-section {
+        @include field-spacing;
+    }
+
+    .name-section {
+        @include field-spacing;
+
+        .fname {
+            @include input;
+
+        }
+    }
+
+    .label-zip {
+        margin-left: 27px;
+    }
+
+    .zip {
+        @include input;
+        width: 60%;
+        height: 35px;
+        margin-left: 26px;
+    }
+
+}
+
+.label {
+    @extend .semiboldmuli-family;
+    @extend .regularsize;
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+    color: $greyD2-color;
+}

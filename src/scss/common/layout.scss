@@ -66,13 +66,13 @@ body {
 
     .product-container,
     .container {
-        padding: 0;
+        padding: 0 20px;
         margin: 0;
     }
 
     .mobile-container,
     .page-container {
-        margin: 0 10px;
+        margin: 0 20px;
         padding: 0;
     }
 
@@ -216,6 +216,7 @@ body {
     .home-product-container {
         padding-left: 0px;
         padding-right: 0px;
+        margin: 0 20px;
     }
 
     .adventure-img {
@@ -225,10 +226,53 @@ body {
 
     .home-container {
         @include mobile-padding;
+        padding-left: 0;
+        padding-right: 0;
     }
+
 
     .take-of-section {
         @include mobile-padding;
+        padding-left: 0;
+        padding-right: 0;
+
+        .sign-leggings {
+            text-align: center;
+        }
+
+        .sub-para {
+            text-align: center;
+        }
+
+        .subtext {
+            text-align: center;
+        }
+
+        .shop-buttons {
+            text-align: center;
+        }
+
+        .takeoff-text {
+            padding: 0;
+        }
+
+        .shopcollection {
+            margin-bottom: 20px;
+            margin-right: 0;
+        }
+
+        .shopnowbtn {
+            margin-bottom: 30px;
+        }
+
+        .fat-line {
+            margin: auto;
+            margin-bottom: 30px;
+        }
+    }
+
+    .adds-container {
+        padding: 0;
     }
 
     .adventure-container {
@@ -304,16 +348,71 @@ body {
         @include mobile-box;
     }
 
-    .shipping-btn{
+    .shipping-btn {
         display: none !important;
     }
 
-    .info-text{
+    .info-text {
         margin: 0;
     }
 
-    .field-edit{
+    .field-edit {
         display: block;
+    }
+
+    .order-succes-section .order-number {
+        padding-bottom: 30px;
+    }
+
+    .mobile-gradient {
+
+        .background-img {
+            width: 100%;
+        }
+
+        .sub-title-transbox {
+            font-family: Source Serif Pro, Semibold;
+            font-size: 36px;
+            color: $title-color;
+            margin: auto;
+            text-align: center;
+            padding-bottom: 5px;
+        }
+
+        .transbox-loream {
+            padding-bottom: 30px;
+            text-align: center;
+        }
+
+        .transbox-btn {
+            text-align: center;
+
+            .shopnow-transbox-btn {
+                width: 220px;
+                height: 40px;
+                color: $white-color;
+                text-transform: uppercase;
+                font-family: muli, bold;
+                font-size: 14px;
+                box-shadow: 0px 3px 6px #39373729;
+                border: 1px solid $primary-brand;
+                background: var(--$primary-brand) 0% 0% no-repeat padding-box;
+                background: $primary-brand 0% 0% no-repeat padding-box;
+            }
+        }
+
+        .transbox-para {
+            font-family: muli;
+            font-size: 16px;
+            font-weight: bold;
+            color: $unnamed-color;
+            position: absolute;
+            margin: 0;
+            top: 30%;
+            padding: 40px;
+            background: transparent linear-gradient(181deg, #F1F1F100 0%, #F0F0F0 100%) 0% 0% no-repeat padding-box;
+            opacity: 0.9;
+        }
     }
 }
 

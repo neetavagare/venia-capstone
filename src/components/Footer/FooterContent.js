@@ -6,7 +6,7 @@ import { Paragraph, AnchorV2 } from '../atoms';
 export default function FooterContent() {
     return (
         <footer className='footerborder container'>
-            <div className='aem-Grid aem-Grid--12 footerbanner mobile-container'>
+            <div className='aem-Grid aem-Grid--12 footerbanner'>
                 <div className='aem-GridColumn aem-GridColumn--default--3 aem-GridColumn--phone--12'>
                     <AnchorV2> <h6 className='account'>Account</h6></AnchorV2>
                     <AnchorV2> <Paragraph classValue='ftext11' name='Sign in'></Paragraph> </AnchorV2>

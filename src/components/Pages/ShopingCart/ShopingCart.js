@@ -26,7 +26,8 @@ function ShopingCart(props) {
     let totalPrice = 0;
 
     props.carts.forEach(element => {
-        totalPrice += element.price;
+        let pricing = element.price * element.count
+        totalPrice += pricing;
     });
 
     totalPrice = Math.round(totalPrice)
@@ -136,7 +137,7 @@ function ShopingCart(props) {
 
                 {/* Pricing summery tabel Component */}
 
-                <div className="aem-Grid aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--12 pricingSection">
+                <div className="aem-Grid aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--12 pricing-section">
                     <PricingSummery totalPrice={totalPrice} isHide={true}> </PricingSummery>
                 </div>
             </div>

@@ -26,10 +26,10 @@ function Header(props) {
         <div className='container container-header'>
             <header className='aem-Grid aem-Grid--12 max-width-header mobileHide '>
                 {/* <nav role="navigation"> */}
-                <div className='aem-GridColumn aem-GridColumn--default--4 venia'>
+                <div className='aem-GridColumn aem-GridColumn--default--3 venia'>
                 <Link className="decorationNone cursor-pointer" to={"/"} ><Label name="venia" className="logo"></Label></Link>
                 </div>
-                <div className='aem-GridColumn aem-GridColumn--default--4 header_text'>
+                <div className='aem-GridColumn aem-GridColumn--default--6 header_text'>
                     <ul>
                         {
                             HeaderLabels.manuItems.map((item) => {
@@ -38,7 +38,7 @@ function Header(props) {
                         }
                     </ul>
                 </div>
-                <div className='aem-GridColumn aem-GridColumn--default--4 header_icons'>
+                <div className='aem-GridColumn aem-GridColumn--default--3 header_icons'>
                     <ul >
                         <li><Link to={"/cart"} ><Anchor><Icon name="ShopBag"> </Icon></Anchor><span className='cart-count'> {props.carts.length}</span></Link></li>
 

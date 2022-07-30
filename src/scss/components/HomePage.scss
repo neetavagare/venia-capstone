@@ -36,6 +36,10 @@
     position: relative;
     top: - 27px;
 
+    .mask-grp-one {
+        padding-top: 20px;
+    }
+
     .womenimg {
         width: 100% !important;
         @extend .hero-catagory;
@@ -154,6 +158,13 @@
         margin-right: 20px;
 
     }
+
+    .fat-line {
+        border-bottom: 8px solid $primary-brand;
+        width: 20%;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
 }
 
 .signature-img {
@@ -194,6 +205,9 @@
 
 }
 
+.adds-container {
+    @include layout;
+}
 
 .adventure-container {
     align-items: center;
@@ -210,6 +224,7 @@
             padding: 4em 2.9em;
             padding-top: 3.5em;
             padding-bottom: 5.4em;
+
             h2 {
                 font-size: 46px;
                 @extend.semiboldsource-family;
@@ -223,7 +238,7 @@
                 margin: 0;
             }
 
-            .shop-device-btn{
+            .shop-device-btn {
                 border: 2px solid $white-color;
                 border-radius: 10px;
                 color: $white-color;

@@ -27,6 +27,9 @@ function ProductDetails(props) {
     useState(async () => {
         props.showLoader();
         var data = await ProductService.getProduct(id);
+        data.image = data.image.replace('https://fakestoreapi.com/', 'https://neetavagare.github.io/');
+        //data.image = encodeURIComponent(data.image);
+
         props.getProductsSuccess(data);
         props.hideLoader();
         let imagesArray = [

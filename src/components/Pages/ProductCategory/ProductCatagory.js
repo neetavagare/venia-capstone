@@ -22,8 +22,21 @@ function ProductCatagory(props) {
       props.hideLoader();
       Helper.showToastMessage("Something went wrong. Please try again")
     });
-    props.getCategoryProducts(products)
-    props.sortProduct(products?.slice(0, pageSize) ?? [])
+
+    /* Data manipulation*/
+    var filteredElements = [];
+
+    products.forEach(item => {
+      item.image = item.image.replace('https://fakestoreapi.com/', 'https://neetavagare.github.io/')
+      if (item.category === "women's clothing") {
+        filteredElements.unshift(item);
+      } else {
+        filteredElements.push(item);
+      }
+    });
+
+    props.getCategoryProducts(filteredElements)
+    props.sortProduct(filteredElements?.slice(0, pageSize) ?? [])
     props.hideLoader()
   }, [])
 
@@ -38,18 +51,32 @@ function ProductCatagory(props) {
       filterData = props.products.filter(d => d.category === item.currentTarget.value);
     }
     props.sortProduct(filterData);
-    
+
   }
 
   const searchByCategory = (item) => {
     let filterData = [...props.products];
-    let currentValue = item.currentTarget.value;
-    if(currentValue){
-      currentValue = currentValue.toLowerCase();
+    // let currentValue = item.currentTarget.value;
+    // if (currentValue) {
+    //   currentValue = currentValue.toLowerCase();
+    // }
+
+    var elements = document.querySelectorAll(".productFilters input[type='checkbox']:checked");
+
+    if (elements && elements.length > 0) {
+      var filteredValues = [];
+      elements.forEach((item) => {
+        let value = (item.currentTarget && item.currentTarget.value) || item.value
+        let values = props.products.filter(d => d.category === value);
+        if (values.length > 0) {
+          filteredValues = filteredValues.concat(values);
+        }
+      });
+      props.sortProduct(filteredValues);
+
+    } else {
+      props.sortProduct(filterData);
     }
-  
-    filterData = props.products.filter(d => d.category === currentValue);
-    props.sortProduct(filterData);
 
     SetShowPagination(true);
   }

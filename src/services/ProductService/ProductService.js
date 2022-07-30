@@ -17,3 +17,4 @@ export default class ProductService {
             .then((res) => res.json())
     }
 }
+//item.image = item.image.replace('https://fakestoreapi.com/', 'https://sooth-assignment.s3.amazonaws.com/')

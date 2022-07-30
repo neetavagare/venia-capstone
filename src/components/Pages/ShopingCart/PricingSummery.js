@@ -10,6 +10,8 @@ import { Link } from 'react-router-dom';
 
 export default function PricingSummery(props) {
     let isCart = props.isHide ? props.isHide : false;
+    let isCheckout = props.isCheckout ? props.isCheckout : false;
+
     return (
         <React.Fragment>
             <div className="aem-Grid aem-Grid--12 ">
@@ -18,9 +20,24 @@ export default function PricingSummery(props) {
                     <div className="subtotal">Subtotal</div>
                     <div className="coupen">Coupen</div>
                     <div className="gift">Gift Card</div>
-                    <div className="tax">Estimated tax</div>
-                    <div className="shhipping">Estimated shipping</div>
-                    <div className="total ">Estimated Total</div>
+                    <div className="tax">
+                        {
+                            isCheckout == true ?
+                                "Tax" : "Estimated tax"
+                        }
+                    </div>
+                    <div className="shhipping">
+                        {
+                            isCheckout == true ?
+                                "shipping" : "Estimated shipping"
+                        }
+                    </div>
+                    <div className="total ">
+                        {
+                            isCheckout == true ?
+                                "Total" : "Estimated Total"
+                        }
+                    </div>
                 </div>
                 <div className="aem-GridColumn aem-GridColumn--default--6 pricing ">
                     <div className="subtotal">${props.totalPrice ? (props.totalPrice) : 0}</div>
@@ -32,7 +49,7 @@ export default function PricingSummery(props) {
                 </div>
             </div>
             {
-                isCart  &&
+                isCart &&
                 <React.Fragment>
                     <div className="aem-Grid aem-Grid--12 textAlignCenter">
                         <Link className="decorationNone cursor-pointer" to={"/checkout"} ><Button classValue="checkoutbtn">

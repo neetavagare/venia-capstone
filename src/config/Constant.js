@@ -8,6 +8,10 @@ export const HeaderLabels = {
     //Header Texts
     manuItems: [
         {
+            label: "Home",
+            className: "text1"
+        },
+        {
             label: "Women",
             className: "text1"
         },
@@ -69,6 +73,9 @@ export const HeaderIcons = {
     Uparrow: 'uparrow',
     Downarrow: 'down-arrow',
     Cross: 'cross',
+    faceBook:'facebook-icon',
+    Insta: 'insta-icon',
+    Twitter: 'twitter-icon',
 }
 
 // Shop-Bag Carousel

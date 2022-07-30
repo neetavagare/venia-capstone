@@ -7,7 +7,7 @@ export default function Footer() {
     // <div className="container">
     <footer className="footerrow container">
 
-      <div className="aem-Grid aem-Grid--12 footer-bottom mobile-container">
+      <div className="aem-Grid aem-Grid--12 footer-bottom">
         <div className="aem-GridColumn aem-GridColumn--default--2 aem-GridColumn--tablet--12 aem-GridColumn--phone--12">
           <Anchor  tabindex=""><Label name="venia" className="footervenia"></Label></Anchor>
         </div>

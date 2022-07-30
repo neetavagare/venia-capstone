@@ -10,13 +10,12 @@ import ToastMessage from './components/atoms/ToastMessage/ToastMessage';
 import { HashRouter } from 'react-router-dom';
 import HomePage from './components/Pages/HomePage/HomePage';
 import Guestcheckout from './components/Pages/Checkout/GuestCheckout';
-// import ShippingPage from './components/Pages/Checkout/ShippingPage';
-// import PaymentPage from './components/Pages/Checkout/PaymentPage';
+import OrderSuccess from './components/Pages/OrderSuccess/OrderSuccess';
 
 
 function App() {
   return (
-     <div>
+    <div>
       <HashRouter>
         <MobileHeader />
         <Header />
@@ -25,15 +24,14 @@ function App() {
           <Route exact path="/category" element={<ProductCatagory />} />
           <Route exact path="/cart" element={<ShopingCart />} />
           <Route exact path="/product/:id" element={<ProductDetails />} />
-          <Route exact path="/" element={<HomePage/>} />
-          <Route exact path='/checkout' element={<Guestcheckout/>}/>
-          {/* <Route exact path='/shippingpage' element={<ShippingPage/>}/>
-          <Route exact path='/paymentpage' element={<PaymentPage/>}/> */}
+          <Route exact path="/" element={<HomePage />} />
+          <Route exact path='/checkout' element={<Guestcheckout />} />
+          <Route exact path='/order-success' element={<OrderSuccess />} />
         </Routes>
       </HashRouter>
       <FooterContent />
       <Footer />
-       </div>
+    </div>
   );
 }
 

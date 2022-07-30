@@ -1,7 +1,9 @@
 import { Anchor } from "../../atoms";
 
 const Pagination = (props) => {
-
+    if(!props.totalItem){
+        return null;
+    }
     return (
         <ul className="pagination">
             {

@@ -1,0 +1,27 @@
+@import '../common/extend.scss';
+@import '../common/layout.scss';
+@import '../common/mixin.scss';
+@import '../partials/variables.scss';
+
+.order-item-container{
+    .total-order-items{
+        padding-bottom: 20px;
+        font-weight: bold;
+    }
+    .details{
+
+        .title-link{
+            font-weight: bold;
+            font-size: 16px;
+            text-decoration: none;
+            color: $unnamed-color;
+        }
+    }
+    .cart-container{
+        .image{
+            width: 90%;
+        }
+    }
+
+    
+}

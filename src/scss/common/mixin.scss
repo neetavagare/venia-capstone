@@ -152,7 +152,7 @@
 @mixin hero-catagory {
     margin-top: -87px !important;
     margin: auto;
-    padding: 17px;
+    padding: 20px;
     background-color: $title-color;
     position: relative;
     width: 83%;
@@ -220,8 +220,9 @@
 @mixin field-box {
     border: 1px solid $border-color;
     border-radius: 2px;
-    width: 95%;
-    padding: 10px;
+    width: 90%;
+    padding: 18px;
+    opacity: 1;
     margin-bottom: 25px;
 }
 
@@ -243,11 +244,16 @@
 }
 
 @mixin mobile-box {
-    display: block;
+    display: block !important;
     width: 50% !important;
     padding-bottom: 20px;
-    padding-left: 20px;
+    // padding-left: 20px;
     color: $grey-D1;
     font-family: Muli, Regular;
     font-size: 16px;
+}
+
+@mixin dropdown-checkbox {
+    font-family: Muli, Regular;
+    background-color: $white-color;
 }

@@ -1,0 +1,105 @@
+@import '../common/extend.scss';
+@import '../common/layout.scss';
+@import '../common/mixin.scss';
+@import '../partials/variables.scss';
+
+
+.order-succes-section {
+
+    .order-banner {
+        text-align: center;
+
+        .order-succes-text {
+            @extend .semiboldsource-family;
+            @extend .fontsize-header;
+            background-color: $white-color;
+            color: $unnamed-color;
+            margin-bottom: 25px;
+        }
+
+        .section-ender-order {
+            width: 102px;
+            height: 8px;
+            background-color: $primary-brand;
+        }
+    }
+
+    .order-number {
+        @extend .semiboldmuli-family;
+        font-size: 20px;
+        margin-top: 25px;
+        color: $unnamed-color;
+        width: 100%;
+        font-weight: bold;
+    }
+
+    .order-field {
+        .info-text {
+            @extend .semiboldmuli-family;
+            @extend .regularsize;
+            margin-bottom: 10px;
+        }
+
+        .payemnt-text {
+            @extend .semiboldmuli-family;
+            @extend .regularsize;
+            margin-bottom: 10px;
+            margin-top: 0;
+        }
+
+        .content-one {
+            padding-bottom: 20px;
+            width: 30%;
+            display: inline-block;
+            color: #535965;
+        }
+    }
+
+    .add-cart {
+        width: 440px;
+        height: 351px;
+        background-color: $primary-D1;
+        border: 1px solid $border-color;
+        border-radius: 2px;
+
+        .add-cart-two {
+            @extend .semiboldsource-family;
+            font-size: 36px;
+            color: $white-color;
+            margin: auto;
+            padding: 0 25px;
+    }
+
+    .add-cart-text {
+        @extend .semiboldsource-family;
+        font-size: 36px;
+        color: $white-color;
+        padding: 42px;
+    }
+
+    .add-cart-icon {
+        padding: 24px 83px;
+
+        .facebook-icon {
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+    }
+}
+
+.page-content {
+    .page-content-one {
+        @extend .muliregular-family;
+        @extend .regularsize;
+        color: $unnamed-color;
+        padding-top: 30px;
+    }
+
+    .page-content-two {
+        @extend .muliregular-family;
+        @extend .regularsize;
+        color: $unnamed-color;
+        padding-top: 30px;
+    }
+}
+}
