@@ -116,6 +116,7 @@ body {
         display: flex;
         align-items: center;
         height: 50px;
+        border-bottom: 0;
 
         .align-center {
             text-align: center;
@@ -489,6 +490,13 @@ body {
     .category-container {
         margin: 0 10px !important;
     }
+
+    .page-content{
+        .page-content-two{
+            padding-bottom: 60px;
+        }
+    }
+   
 }
 
 

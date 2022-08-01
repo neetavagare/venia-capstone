@@ -24,7 +24,7 @@ export default function OrderSuccess(props) {
                     </h2>
                     <div className="dotborder"></div>
                 </div>
-                <div className="aem-GridColumn aem-GridColumn--default--8 order-field">
+                <div className="aem-GridColumn aem-GridColumn--default--8 order-field aem-GridColumn--phone--12">
                 <div className="order-number">Order Number #1700834</div>
                     <div className='aem-Grid aem-Grid--8 order-page-content'>
                         <div className="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--8">

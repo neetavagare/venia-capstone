@@ -3,7 +3,7 @@
 @import '../common/extend.scss';
 
 .home-slider {
-    background-color: $color-header;
+    background-color: $header-2nd-color;
 
     .home-banner {
         @extend .source-family;
