@@ -2,6 +2,28 @@
 @import '../common/mixin.scss';
 @import '../common/extend.scss';
 
+.home-page-slider-container{
+    .image-gallery-icon{
+        color: #535965 !important;
+    }
+    .image-gallery-slide-wrapper{
+        width: 100% !important;
+        .image-gallery-slides{
+            line-height: normal !important;
+            white-space : normal !important
+        }
+    }
+    .image-gallery-left-nav .image-gallery-svg, .image-gallery-right-nav .image-gallery-svg{
+        height: 90px;
+        width: 38px
+    }
+    .image-gallery-left-nav{
+        left: 10px;
+    }
+    .image-gallery-right-nav{
+        right: 10px;
+    }
+}
 .home-slider {
     background-color: $header-2nd-color;
 

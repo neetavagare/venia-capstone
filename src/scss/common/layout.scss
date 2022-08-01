@@ -396,8 +396,13 @@ body {
         padding-bottom: 30px;
     }
 
-    .mobile-gradient {
+    .home-page-slider-container {
+        .image-gallery-bullets {
+            bottom: 50px !important;
+        }
+    }
 
+    .mobile-gradient {
         .background-img {
             width: 100%;
         }
@@ -412,7 +417,7 @@ body {
         }
 
         .transbox-loream {
-            padding-bottom: 30px;
+            padding: 20px;
             text-align: center;
         }
 
@@ -439,33 +444,19 @@ body {
         }
 
         .transbox-para {
-            margin: 0;
-            padding: 0;
-            font-size: 100%;
-            line-height: 1;
-        }
-
-        .transbox-para {
             color: #fff;
-            left: 0%;
-            line-height: 1;
-            padding: 4.375rem 1.25rem;
-            position: absolute;
             white-space: normal;
             justify-content: center;
-            align-items: center;
+            flex-direction: column;
+            position: absolute;
+            top: 44%;
             font-family: muli;
-            width: 90%;
+            width: 100%;
             font-size: 16px;
             font-weight: bold;
             color: $unnamed-color;
             bottom: 0;
-            // position: absolute;
-            // margin: 0;
-            // top: 30%;
-            // padding: 40px;
             background: transparent linear-gradient(181deg, #F1F1F100 0%, #F0F0F0 100%) 0% 0% no-repeat padding-box;
-            // opacity: 0.9;
         }
     }
 
@@ -491,12 +482,12 @@ body {
         margin: 0 10px !important;
     }
 
-    .page-content{
-        .page-content-two{
+    .page-content {
+        .page-content-two {
             padding-bottom: 60px;
         }
     }
-   
+
 }
 
 

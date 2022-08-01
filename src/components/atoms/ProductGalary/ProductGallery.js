@@ -10,6 +10,6 @@ export default function ProductGallery(props) {
     const isMobile = width < 900;
 
     return (
-        <ImageGallery showFullscreenButton={fullScreen} showBullets={isMobile ? true : false} thumbnailPosition={isMobile ? "bottom" : "left"} items={props.images} showThumbnails={isMobile ? false : true} />
+        <ImageGallery showPlayButton={false} showFullscreenButton={fullScreen} showBullets={isMobile ? true : false} thumbnailPosition={isMobile ? "bottom" : "left"} items={props.images} showThumbnails={isMobile ? false : true} />
     )
 }
