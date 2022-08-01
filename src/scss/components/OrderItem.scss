@@ -3,25 +3,61 @@
 @import '../common/mixin.scss';
 @import '../partials/variables.scss';
 
-.order-item-container{
-    .total-order-items{
+.order-item-container {
+    .total-order-items {
+        @extend .semiboldmuli-family;
+        @include text-color;
         padding-bottom: 20px;
         font-weight: bold;
     }
-    .details{
 
-        .title-link{
+    .title-product {
+        @extend .semiboldmuli-family;
+        @include text-color;
+        font-size: 16px;
+        margin-top: 0;
+    }
+
+    .size-product {
+        @extend .muliregular-family;
+        @include text-color;
+        font-size: 16px;
+        padding-bottom: 10px;
+    }
+
+    .color-product {
+        @extend .muliregular-family;
+        @include text-color;
+        font-size: 16px;
+        padding-bottom: 10px;
+    }
+
+    .price-product {
+        @extend .muliregular-family;
+        @include text-color;
+        font-size: 16px;
+        padding-bottom: 10px;
+    }
+
+    .details {
+
+        .title-link {
             font-weight: bold;
             font-size: 16px;
             text-decoration: none;
             color: $unnamed-color;
         }
     }
-    .cart-container{
-        .image{
-            width: 90%;
+
+    .cart-container {
+
+        .image {
+            background-color: #F3F3F3;
+            object-fit: cover;
+            width: 75%;
+            margin: auto;
         }
     }
 
-    
+
 }

@@ -1,0 +1,78 @@
+@import '../common/extend.scss';
+@import '../common/layout.scss';
+@import '../common//mixin.scss';
+@import '../partials/variables.scss';
+
+
+
+.shipping-section {
+    .shipping-tag {
+        @include field-padding;
+        @extend .semiboldmuli-family;
+        font-size: 20px;
+        margin: 0;
+    }
+
+    .info-text {
+        @extend .semiboldmuli-family;
+        @extend .regularsize;
+        margin: auto;
+        padding-bottom: 20px;
+    }
+
+    .radio-subtext{
+        @include text-color;
+        @extend .muliregular-family;
+        font-weight: normal;
+        font-size: 16px;
+    }
+    .radio-one {
+        margin-bottom: 15px;
+
+        .radio-align {
+            vertical-align: middle;
+        }
+
+        .radiotext-one {
+            vertical-align: middle;
+            @include radio-section;
+        }
+    }
+
+    .radio-two {
+        margin-bottom: 15px;
+
+        .radio-align {
+            vertical-align: middle;
+        }
+
+        .radiotext-two {
+            vertical-align: middle;
+            @include radio-section;
+        }
+    }
+
+    .radio-three {
+        margin-bottom: 15px;
+
+        .radio-align {
+            vertical-align: middle;
+        }
+
+        .radiotext-three {
+            vertical-align: middle;
+            @include radio-section;
+        }
+    }
+
+    .shipping-btn {
+        display: flex;
+        justify-content: center;
+
+        .payment-btn {
+            @include continuebtn-checkout;
+            @include border-btn-hover;
+            margin-top: 40px;
+        }
+    }
+}

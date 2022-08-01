@@ -4,7 +4,10 @@ import ImageGallery from 'react-image-gallery';
 import {isMobile} from 'react-device-detect';
 
 export default function ProductGallery(props) {
+    let fullScreen = props.showFullscreenButton ? true : false;
+    // const isMobile = width < 900
+    
     return (
-        <ImageGallery thumbnailPosition= {isMobile ? "bottom" : "left"}  items={props.images}  showThumbnails={isMobile ? false : true} />
+        <ImageGallery showFullscreenButton={fullScreen} showBullets={isMobile ? true : false} thumbnailPosition= {isMobile ? "bottom" : "left"}  items={props.images}  showThumbnails={isMobile ? false : true} />
     )
 }

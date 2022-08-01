@@ -10,7 +10,7 @@ import { addProductToCart, replaceCart } from "../../redux/actions/index";
 import LocalService from '../../services/LocalService/LocalService';
 import { Image } from "../atoms";
 import { Anchor } from '../atoms';
-
+import veniaLogo from '../../images/Product_Images/venia1.png'
 
 function Header(props) {
     useEffect(() => {
@@ -27,7 +27,10 @@ function Header(props) {
             <header className='aem-Grid aem-Grid--12 max-width-header mobileHide '>
                 {/* <nav role="navigation"> */}
                 <div className='aem-GridColumn aem-GridColumn--default--3 venia'>
-                <Link className="decorationNone cursor-pointer" to={"/"} ><Label name="venia" className="logo"></Label></Link>
+                <Link className="decorationNone cursor-pointer" to={"/"} >
+                    {/* <Label name="venia" className="logo"></Label> */}
+                        <Image url={veniaLogo} classValue={"logo"}></Image>
+                    </Link>
                 </div>
                 <div className='aem-GridColumn aem-GridColumn--default--6 header_text'>
                     <ul>

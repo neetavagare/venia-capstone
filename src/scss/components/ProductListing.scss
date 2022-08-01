@@ -21,7 +21,10 @@
     }
 
     .results {
-        @include size;
+        @extend .regularsize;
+        @extend .semiboldmuli-family;
+        @include text-color;
+        font-weight: 600;
     }
 
     .sort {
@@ -29,6 +32,9 @@
     }
 
     .dropdownn {
+        @extend .regularsize;
+        @extend .semiboldmuli-family;
+        @include text-color;
         border: 2px solid $greyL2-color;
         border-radius: 8px;
         padding: 8px;
@@ -43,6 +49,11 @@
     text-align: -webkit-center;
     margin-left: 10px;
     margin-right: 10px;
+    transition: 0.1s ease-in;
+
+    &:hover {
+        transform: scale(0.98);
+    }
 
     .productMainImage {
         text-align: center;
@@ -77,6 +88,7 @@
         padding-top: 8px;
         padding-bottom: 5px;
         font-size: 18px;
+        font-family: Muli, Bold;
         color: $unnamed-color;
         text-decoration: none;
     }
@@ -107,11 +119,12 @@
     }
 
     .filter {
-        font-size: 16px;
+        @include filterborder;
+        @extend .regularsize;
+        @extend .semiboldmuli-family;
         padding-top: 10px;
         font-weight: bold;
         padding-bottom: 10px;
-        @include filterborder;
 
     }
 
@@ -127,8 +140,9 @@
     }
 
     .filtertitle {
-        font-size: 16px;
-        font-weight: bolder;
+        @extend .muliregular-family;
+        font-size: 20px;
+        color: $greyD2-color;
     }
 
     .filteroption {
@@ -173,18 +187,19 @@
     }
 
     .categoryBorder {
-        border-bottom: 5px solid $primary-brand;
-        width: 30%;
+        border-bottom: 8px solid $primary-brand;
+        width: 33%;
         text-align: center;
         margin: 0 auto;
         margin-top: 15px;
     }
 
     .colorbox {
+        @extend .semiboldsource-family;
+        @extend .fontsize-header;
         width: 100%;
         text-align: center;
         padding: 24px;
-        font-size: 40px;
         background-color: $unnamed-color;
         color: $white-color;
 
@@ -201,7 +216,8 @@
     }
 
     .blackbox {
-        margin: 0px 27px;
+        @extend .semiboldsource-family;
+        margin: 0px 10px;
         position: relative;
         font-size: 36px;
         margin-top: -76px;
@@ -213,31 +229,40 @@
 
 }
 
-.catagories {
-    @include productcatagories;
-    padding-top: 20px;
-    padding-left: 15px;
 
-    .catagory3 {
-        color: $grey-dark;
+
+.results-view {
+    .updownarrow {
+        @include productcatagories;
+        padding-top: 35px;
+
+        .sorttext {
+            padding-left: 8px;
+        }
     }
-}
 
-.slider {
-    @include productcatagories;
-    padding-top: 30px;
-    padding-left: 30px;
 
-    .slidertext {
-        padding-left: 10px;
+    .mobile-view{
+        text-align: center;
     }
-}
+    .slider {
+        @include productcatagories;
+        padding-top: 30px;
+        padding-left: 30px;
 
-.updownarrow {
-    @include productcatagories;
-    padding-top: 35px;
+        .slidertext {
+            padding-left: 10px;
+        }
+    }
 
-    .sorttext {
-        padding-left: 8px;
+    .catagories {
+        @include productcatagories;
+        font-weight: normal;
+        padding-top: 20px;
+        padding-left: 15px;
+
+        .catagory3 {
+            color: $grey-dark;
+        }
     }
 }

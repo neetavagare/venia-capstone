@@ -1,0 +1,97 @@
+@import '../common/extend.scss';
+@import '../common/layout.scss';
+@import '../common//mixin.scss';
+@import '../partials/variables.scss';
+
+
+
+.payment-section {
+    .shipping-btn {
+        display: flex;
+        justify-content: center;
+
+        .payment-btn {
+            @include continuebtn-checkout;
+            @include border-btn-hover;
+            margin-top: 40px;
+        }
+    }
+
+    .radio-paypal {
+        @extend .regularsize;
+        @extend .muliregular-family;
+        margin-bottom: 20px;
+        margin-left: 8px;
+        vertical-align: middle;
+    }
+
+    .billing-checkbox-container{
+        margin-bottom: 10px;
+        margin-top: 8px;
+    }
+    .myCheck {
+        @include field-margin;
+        margin-top: 20px;
+        width: 20px;
+        height: 20px;
+        vertical-align: middle;
+    }
+
+    .shipping-tag {
+        @include field-padding;
+        @extend .semiboldmuli-family;
+        font-size: 20px;
+        margin: 0;
+    }
+
+    .info-text {
+        @extend .semiboldmuli-family;
+        @extend .regularsize;
+        margin: 0;
+        //margin: 20px 20px;
+    }
+
+    .field {
+        border: 2px solid #B5B7BC;
+        border-radius: 8px;
+        width: 320px;
+        height: 34px;
+        margin-bottom: 20px;
+    }
+
+
+    .credit-radio {
+        @include field-padding;
+        @include text-color;
+        @extend .regularsize;
+        @extend .muliregular-family;
+
+        .radio {
+            margin: 0
+        }
+
+        .radio-card {
+            @extend .regularsize;
+            @extend .muliregular-family;
+            padding-left: 5px
+        }
+    }
+
+    .end-field {
+        display: flex;
+
+        .date-field {
+            @include input;
+            width: 190px;
+        }
+        .help-circle{
+            margin-left: 3px
+        }
+
+        .cvv-field {
+            @include input;
+            margin-left: 13px;
+            width: 35%;
+        }
+    }
+}

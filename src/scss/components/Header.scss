@@ -14,7 +14,7 @@
     position: sticky;
     top: 0;
     z-index: 100;
-    padding: 15px;
+    padding: 12px;
 }
 
 .venia {
@@ -25,8 +25,9 @@
     }
 
     .logo {
-        @include venialogo;
-        margin-top: 20px;
+        // @include venialogo;
+        // margin-top: 20px;
+        height: 28px;
     }
 }
 
@@ -37,6 +38,7 @@
     display: flex;
     justify-content: center;
     // padding-top: 14px;
+    padding-top: 6px;
     font-size: 15px;
 
     ul {
@@ -72,6 +74,7 @@
 .header_icons {
     font-family: Mulish;
     text-align: end;
+    padding-top: 6px;
     // padding-top: 16px;
 
     ul {

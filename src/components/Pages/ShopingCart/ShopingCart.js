@@ -95,7 +95,9 @@ function ShopingCart(props) {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="aem-GridColumn aem-GridColumn--phone--1 deskTopHide">...</div>
+                                <div className="aem-GridColumn aem-GridColumn--phone--1 deskTopHide">
+                                    <Icon name="more_horizantal" classValue="dot-mobile"></Icon>
+                                </div>
 
                                 <div className='aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--11'>
                                     <div className='aem-GridColumn aem-GridColumn--default--2 cart_button button'>

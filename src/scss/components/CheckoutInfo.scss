@@ -89,6 +89,11 @@
         margin-left: 26px;
     }
 
+    .continue-btn {
+        @include continuebtn-checkout;
+        @include border-btn-hover;
+    }
+
 }
 
 .label {

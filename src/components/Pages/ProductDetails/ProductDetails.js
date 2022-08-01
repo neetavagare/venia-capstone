@@ -7,8 +7,7 @@ import { ProductService } from "../../../services/ProductService";
 import { useParams } from 'react-router-dom';
 import Loader from "../../atoms/Loader/Loader";
 import RatingStar from '../../atoms/RatingStar/RatingStar';
-import Box from '../../atoms/Box/Box';
-import { ADDED_PRODUCT_TO_BAG_MESSAGE, ColorFilter, PRODUCT_ALREADY_EXITS, SizeFilter, Sizes } from '../../../config/Constant';
+import { ADDED_PRODUCT_TO_BAG_MESSAGE, ColorFilter, PRODUCT_ALREADY_EXITS, SizeFilter } from '../../../config/Constant';
 import LocalService from "../../../services/LocalService/LocalService";
 import { useNavigate } from 'react-router-dom'
 import Helper from "../../../helper/Helper";
@@ -92,7 +91,7 @@ function ProductDetails(props) {
                     </div>
                     <div className="loreamdetail">{props.productData.description?.substring(0, 100)}.
                         <span>
-                            <Anchor className="readmore" name="Read More"></Anchor>
+                            <Anchor classValue="readmore" name="Read More"></Anchor>
                         </span>
                     </div>
 
@@ -147,7 +146,9 @@ function ProductDetails(props) {
                     <Paragraph classValue="describe"
                         name={props.productData.description} >
                     </Paragraph>
-                    <div className="sectionender mobileHide"></div>
+                    <div className="section-enderpart">
+                    <div className="sectionender"></div>
+                    </div>
                 </div>
             </div>
         </section>

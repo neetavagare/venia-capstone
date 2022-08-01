@@ -76,6 +76,7 @@ export const HeaderIcons = {
     faceBook:'facebook-icon',
     Insta: 'insta-icon',
     Twitter: 'twitter-icon',
+    more_horizantal: 'more-horizantal',
 }
 
 // Shop-Bag Carousel
@@ -309,7 +310,7 @@ export const ColorFilter = [
 ]
 
 export const CategoriesFilter = [{
-    text: 'jewellery',
+    text: 'Jewellery',
     value : 'jewelery'
 },
 {
@@ -381,7 +382,7 @@ export const DropDownOptions = [
     //Header Texts
     {
         value: "",
-        name: "Select"
+        name: "Sort By Price"
     },
     {
         value: "0",

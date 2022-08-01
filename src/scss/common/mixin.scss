@@ -36,8 +36,8 @@
 }
 
 @mixin size {
-    font-size: 14px;
-    font-family: mulish;
+    font-size: 16px;
+    @extend .muliregular-family;
 }
 
 @mixin headingsize {
@@ -79,7 +79,7 @@
 @mixin text {
     font-size: 16px;
     font-family: Mulish;
-    color: $unnamed-color;
+    color: $grey-dark;
     margin-top: 8px;
     margin-bottom: 8px;
 }
@@ -118,8 +118,12 @@
 }
 
 @mixin saveshare {
+    @extend .semiboldmuli-family;
+    @extend .regularsize;
+    font-weight: 600;
     padding-right: 17px;
     padding-left: 10px;
+    vertical-align: top;
 }
 
 @mixin peekbagtitle {
@@ -182,9 +186,8 @@
 }
 
 @mixin section-ender {
-    background-color: $primary-brand;
-    height: 8px;
-    width: 102px;
+    border: 6px solid $primary-brand;
+    width: 10%;
 }
 
 @mixin input {
@@ -256,4 +259,27 @@
 @mixin dropdown-checkbox {
     font-family: Muli, Regular;
     background-color: $white-color;
+}
+
+@mixin size-family{
+    font-family: Source Serif Pro, Semibold;
+    font-size: 36px;
+    color: $unnamed-color;
+}
+
+@mixin text-color {
+    color: $unnamed-color;
+}
+
+@mixin muli-sizetwenty {
+    font-size: 20px;
+    font-family: Muli, SemiBold;
+
+}
+
+@mixin border-btn-hover {
+    &:hover{
+        border-color: $primary-D1;
+        color:$primary-D1;
+    }
 }

@@ -8,9 +8,9 @@ export default function OrderReview(props) {
     return (
         <div className='aem-Grid aem-GridColumn aem-GridColumn--default--8 aem-GridColumn--phone--12 shipping-section '>
             <h2 className="guest-check">Guest Checkout</h2>
-            <ShippingDetails title="Shipping Information" type={"shipping-info"}></ShippingDetails>
-            <ShippingDetails title="Shipping Method" type={"shipping-method"}></ShippingDetails>
-            <ShippingDetails title="Payment Information" type={"payment-method"}></ShippingDetails>
+            <ShippingDetails handleShippingClick={props.handleShippingClick}  title="Shipping Information" type={"shipping-info"}></ShippingDetails>
+            <ShippingDetails handleShippingClick={props.handleShippingClick} title="Shipping Method" type={"shipping-method"}></ShippingDetails>
+            <ShippingDetails handleShippingClick={props.handleShippingClick} title="Payment Information" type={"payment-method"}></ShippingDetails>
             <OrderItem cartItems={props.cartItems}></OrderItem>
             <div className='place-order-button-container'>
                 <Button onClick={props.handleClick} classValue="place-order-button" on> place order</Button>

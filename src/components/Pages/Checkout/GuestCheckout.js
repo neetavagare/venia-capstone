@@ -65,6 +65,29 @@ function Guestcheckout(props) {
         setCheckout(false)
     }
 
+    const handleShippingClick = (type) =>{
+        let currentType = type.currentTarget.getAttribute('data-type')
+
+        if(currentType === "shipping-info"){
+            setCheckout(true)
+            setIsShipping(false);
+            setIsPayment(false);
+            setIsReview(false);
+        }else if(currentType === "shipping-method"){
+            setCheckout(false)
+            setIsShipping(true);
+            setIsPayment(false);
+            setIsReview(false);
+        }
+        else if(currentType === "payment-method"){
+            setCheckout(false)
+            setIsShipping(false);
+            setIsPayment(true);
+            setIsReview(false);
+        }
+
+        return false;
+    }
 
     let pricingName = (isShipping || isPayment || isReview) ? true : false;
     let classNames = pricingName ? "aem-Grid aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--12 pricing-section checkout-pricing-spacing" : 
@@ -82,15 +105,15 @@ function Guestcheckout(props) {
 
                 {
                     isShipping &&
-                    <ShppingSection paymentToMethod={paymentToMethod}></ShppingSection>
+                    <ShppingSection handleShippingClick={handleShippingClick} paymentToMethod={paymentToMethod}></ShppingSection>
                 }
                 {
                     isPayment &&
-                    <PaymentSelection reviewToOrder={reviewToOrder}></PaymentSelection>
+                    <PaymentSelection handleShippingClick={handleShippingClick} reviewToOrder={reviewToOrder}></PaymentSelection>
                 }
                 {
                     isReview &&
-                    <OrderReview cartItems={items} handleClick={handleClick}></OrderReview>
+                    <OrderReview handleShippingClick={handleShippingClick} cartItems={items} handleClick={handleClick}></OrderReview>
                 }
                 {
                     checkout && <div className="aem-Grid aem-GridColumn aem-GridColumn--default--4 sign-Section mobileHide">
@@ -99,7 +122,7 @@ function Guestcheckout(props) {
                                 Sign in for Express Checkout
                             </div>
                             <div className="aem-GridColumn aem-GridColumn--default--2">
-                                <button className="sign-in">Sign in</button>
+                                <button className="sign-in cursor-pointer">Sign in</button>
                             </div>
                         </div>
                     </div>

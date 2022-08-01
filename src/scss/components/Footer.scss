@@ -72,14 +72,18 @@
         }
 
         li a {
+            @include text-color;
+            @include cursor;
+            @extend .muliregular-family;
+            font-size: 14px;
             text-decoration: underline;
             list-style: none;
-            color: $grey-dark;
-            @include cursor;
         }
     }
 
     .footerColor {
+        @extend .muliregular-family;
+        font-size: 14px;
         color: $grey-dark;
 
     }

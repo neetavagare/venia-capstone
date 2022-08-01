@@ -44,9 +44,13 @@
         display: flex;
 
         .startCount {
+            @include text-color;
+            @extend .semiboldmuli-family;
+            text-decoration: underline;
+            font-weight: 600;
             display: flex;
             margin-top: 5px;
-            margin-left: 14px;
+            font-size: 14px;
             justify-content: center;
             align-items: center;
         }
@@ -66,9 +70,14 @@
         padding-bottom: 10px;
     }
 
-    .readmore,
+    .readmore {
+        @include text-color;
+        text-decoration: underline;
+        font-weight: 600;
+    }
+
     a {
-        color: $unnamed-color;
+        @include text-color;
     }
 
     .detailcolor {
@@ -79,7 +88,7 @@
         @include boldFont
     }
 
-    
+
     .detailsize {
         @include ptitle;
         font-size: 20px;
@@ -92,8 +101,9 @@
         font-size: 20px;
         font-family: Mulish, SemiBold;
         margin-bottom: 10px;
-        @include boldFont
+        font-weight: 600;
     }
+
 
     .quanrbtn {
         border: 2px solid $grey-M1-color;
@@ -116,6 +126,10 @@
         margin-bottom: 15px;
         text-transform: uppercase;
         cursor: pointer;
+
+        &:hover {
+            background-color: $primary-D1;
+        }
     }
 
     .saveIcon {
@@ -168,6 +182,7 @@
     .description {
         @include ptitle;
         font-size: 20px;
+        font-weight: 600;
     }
 
     .sectionender {
@@ -176,54 +191,29 @@
 }
 
 
-.detailing {
-    @include ptitle;
-    padding-top: 50px;
+// .detailing {
+//     @include ptitle;
+//     padding-top: 50px;
+//     .content2 {
+//         padding-top: 50px;
+//         margin-top: 40px;
+//     }
 
-    .sweatdetailing {
-        padding-top: 45px;
-
-        .wicking {
-            font-size: 16px;
-        }
-
-        .fabric {
-            padding-top: 15px;
-            font-size: 16px;
-        }
-
-        .swaetIcon1 {
-            margin-left: 40px;
-            width: 35%
-        }
-
-        .swaetIcon2 {
-            padding-top: 5px;
-            padding-left: 36px;
-            width: 36%;
-        }
-    }
-
-    .content2 {
-        padding-top: 50px;
-        margin-top: 40px;
-    }
-
-    .precaution {
-        font-size: 20px;
-        padding-left: 45px;
-    }
+//     .precaution {
+//         font-size: 20px;
+//         padding-left: 45px;
+//     }
 
 
 
-    .breath {
-        font-size: 16px;
-        padding-top: 15px;
-    }
+//     .breath {
+//         font-size: 16px;
+//         padding-top: 15px;
+//     }
 
-    .cotton {
-        padding-top: 15px;
-        font-size: 16px;
-    }
+//     .cotton {
+//         padding-top: 15px;
+//         font-size: 16px;
+//     }
 
-}
+// }

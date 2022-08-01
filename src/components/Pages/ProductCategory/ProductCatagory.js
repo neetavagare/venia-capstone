@@ -6,7 +6,7 @@ import { getCategoryProducts, hideLoader, showLoader, sortProduct } from "../../
 import Loader from "../../atoms/Loader/Loader";
 import Pagination from "./Pegination";
 import Helper from "../../../helper/Helper";
-
+import Beans from '../../../images/Product_Images/Beans.png';
 import boys from '../../../images/Product_Images/boys.png';
 import { Image } from "../../atoms";
 
@@ -110,7 +110,7 @@ function ProductCatagory(props) {
       <div className="aem-Grid aem-Grid--12 aem-GridColumn--phone--4 boximg">
         <div className="deskTopHide">
           <div>
-            <Image alt={""} url={boys} classValue="mobileimg"></Image>
+            <Image alt={""} url={Beans} classValue="mobileimg"></Image>
           </div>
           <div className="blackbox">
             <div>Mens's Outerwear</div>
@@ -129,7 +129,7 @@ function ProductCatagory(props) {
         </div>
       </div>
     </div>
-    <div className="page-container">
+    <div className="page-container category-container">
       <Loader isLoading={props.isLoading}></Loader>
       <ProductListing data={data} sortByCategory={sortByCategory} handleClick={searchByCategory}></ProductListing>
       {

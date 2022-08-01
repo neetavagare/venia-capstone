@@ -7,7 +7,7 @@ import electronics from '../../../images/Product_Images/electronics.png';
 import jewellery from '../../../images/Product_Images/jewellery.png';
 import Boykurti from '../../../images/Product_Images/Boykurti.png';
 import advanture from '../../../images/Product_Images/advanture.PNG';
-import { Image } from "../../atoms";
+import { Image, ProductGallery } from "../../atoms";
 import mapLocation from '../../../images/svgIcons/map-pin.svg';
 import { useNavigate } from 'react-router-dom'
 
@@ -17,6 +17,41 @@ export default function HomePage() {
         navigate("/category", { replace: true });
         console.log("Disable cache")
     }
+
+    const renderItemFunction = (item) => {
+        return <div className="aem-GridColumn  aem-GridColumn--phone--12 mobile-gradient deskTopHide   ">
+
+            <div className="transbox-para">
+                <h3 className="sub-title-transbox">
+                    Shop the new Signature Collection
+                </h3>
+                <div className="transbox-loream">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                </div>
+                <div className="transbox-btn">
+                    <button className="shopnow-transbox-btn" onClick={handleClick}>shop now</button>
+                </div>
+            </div>
+            {/* <div className=""> */}
+            <Image alt={""} url={chuko} classValue="background-img"></Image>
+
+            <div></div>
+
+            {/* </div> */}
+        </div>
+    };
+
+    const images = [
+        {
+            renderItem: renderItemFunction
+        },
+        {
+            renderItem: renderItemFunction
+        },
+        {
+            renderItem: renderItemFunction
+        },
+    ];
 
     return (
         <section>
@@ -31,7 +66,21 @@ export default function HomePage() {
                         <button className="shopnowbtn" onClick={handleClick}>shop now</button>
                     </div>
                 </div>
+                <div className='aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--12 mobileHide'>
+                    <Image alt={""} url={signature} classValue="signature-img"></Image>
+                </div>
+
+                {/* {
+                    images?.length > 0 &&
+                        <ProductGallery showFullscreenButton={false} images={images} />
+                } */}
                 <div className="aem-GridColumn  aem-GridColumn--phone--12 deskTopHide mobile-gradient">
+
+                    {/* {
+                        images?.length > 0 &&
+                        <ProductGallery images={images} />
+                    } */}
+
                     <div className="">
                         <Image alt={""} url={chuko} classValue="background-img"></Image>
                     </div>
@@ -48,10 +97,8 @@ export default function HomePage() {
                         </div>
                     </div>
 
-                </div>
-                <div className='aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--12 mobileHide'>
-                    <Image alt={""} url={signature} classValue="signature-img"></Image>
-                </div>
+                </div> 
+
             </div>
             <section className="home-product-container">
                 <div className='aem-Grid aem-Grid--12 home-container'>

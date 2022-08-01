@@ -20,6 +20,9 @@
 
         .shopnowbtn {
             @include home-shopbtn;
+            &:hover{
+                background-color: $primary-D1;
+            }
         }
 
         .signaturepara {
@@ -147,11 +150,15 @@
 
     .shopnowbtn {
         @include home-shopbtn;
+        &:hover{
+            background-color: $primary-D1;
+        }
 
     }
 
     .shopcollection {
         @include home-shopbtn;
+        @include border-btn-hover;
         background-color: $white-color;
         border: 2px solid $primary-brand;
         color: $primary-brand;

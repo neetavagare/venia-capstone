@@ -15,6 +15,9 @@
 
     .remove-btn {
         cursor: pointer;
+        &:hover{
+            color: $primary-D1;
+        }
     }
 
     .details {
@@ -140,6 +143,10 @@
         border: none;
         border-radius: 28px;
         background-color: $primary-brand;
+
+        &:hover{
+            background-color: $primary-D1;
+        }
     }
 
     .paypal-exp {

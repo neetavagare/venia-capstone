@@ -14,12 +14,12 @@ export default function ProductListing(props) {
     return (
         // Product Listing Component Page
         <section>
-            <div className="aem-Grid aem-Grid--12">
+            <div className="aem-Grid aem-Grid--12 results-view">
 
                 <div className="aem-Grid aem-Grid--12 deskTopHide catagories">
                     <CategoryLabel></CategoryLabel>
                 </div>
-                <div className="aem-Grid aem-Grid--4 deskTopHide">
+                <div className="aem-Grid aem-Grid--4 deskTopHide mobile-view">
                     <div className="aem-GridColumn aem-GridColumn--phone--2 slider">
                         <Anchor><Icon name="slider"> </Icon></Anchor>
                         <Anchor href="" classValue="slidertext"
