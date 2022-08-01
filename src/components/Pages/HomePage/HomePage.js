@@ -19,11 +19,13 @@ export default function HomePage() {
         console.log("Disable cache")
     }
     const [width] = UseWindowSize();
+
     const isMobile = width < 900;
+    
 
     const renderItemFunction = (item) => {
         var deskTopText =
-            <div className="aem-Grid aem-Grid--12 aem-GridColumn--tablet--12 home-slider">
+            <div className="aem-Grid aem-Grid--12  home-slider">
                 <div className="aem-Grid aem-Grid--12 aem-GridColumn--tablet--12">
                     <div className='aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--12 mobileHide home-banner'>
                         <h1 className="signature">Shop the new Signature Collection</h1>
@@ -42,7 +44,7 @@ export default function HomePage() {
             </div>
 
         let mobileText = <div className="mobile-image-galary">
-            <div className="aem-GridColumn  aem-GridColumn--phone--12 mobile-gradient deskTopHide   ">
+            <div className="aem-GridColumn  aem-GridColumn--phone--12 mobile-gradient">
 
 
                 {/* <div className=""> */}

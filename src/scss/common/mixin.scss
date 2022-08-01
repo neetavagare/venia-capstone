@@ -193,7 +193,8 @@
 @mixin input {
     border: 2px solid $greyL2-color;
     border-radius: 8px;
-    width: 320px;
+    width: 86%;
+    max-width: 320px;
     height: 34px;
     @extend .semiboldmuli-family;
     @extend .regularsize;

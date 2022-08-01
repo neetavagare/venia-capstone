@@ -30,7 +30,7 @@ export default function CheckoutInfo(props) {
                         <InputBox label="First Name" type={"text"} name={'fname'} classValue={'email'} />
                     </div>
                     <div className='aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--8 mobile-spacing '>
-                        <InputBox label="Last Name" type={"number"} name={'lname'} classValue={'email'} />
+                        <InputBox label="Last Name" type={"text"} name={'lname'} classValue={'email'} />
                     </div>
                 </div>
                 <div className="aem-Grid aem-Grid--8 address-section">
