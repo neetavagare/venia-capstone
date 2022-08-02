@@ -3,6 +3,11 @@ import initialState from "./initialState";
 
 export function productReducer(state = initialState, action) {
   switch (action.type) {
+    case actionTypes.GET_CATEGORY_LIST:
+      return {
+        ...state,
+        categories: action.payload
+      }
     case actionTypes.GET_PRODUCTS:
       return {
         ...state,

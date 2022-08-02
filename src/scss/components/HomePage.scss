@@ -29,6 +29,7 @@
 
     .home-banner {
         @extend .source-family;
+        text-align: left;
         color: $unnamed-color;
         padding-left: 80px;
         padding-right: 120px;
@@ -174,6 +175,7 @@
         @include home-shopbtn;
         &:hover{
             background-color: $primary-D1;
+            border: none;
         }
 
     }

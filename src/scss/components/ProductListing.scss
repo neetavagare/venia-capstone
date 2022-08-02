@@ -36,6 +36,7 @@
         @extend .semiboldmuli-family;
         @include text-color;
         border: 2px solid $greyL2-color;
+        background-color: $white-color;
         border-radius: 8px;
         padding: 8px;
         width: 32%;
@@ -260,7 +261,6 @@
         font-weight: normal;
         padding-top: 20px;
         padding-left: 15px;
-
         .catagory3 {
             color: $grey-dark;
         }

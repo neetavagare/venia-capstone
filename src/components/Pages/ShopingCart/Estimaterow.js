@@ -15,19 +15,19 @@ export default function Estimaterow() {
                             Estimate your Shipping
                         </div>
                         <div className='shippingsummery'>
-                            <span className='mobileHideInline marginRight20'>Shipping to 91001</span>  <Icon name="downarrow"> </Icon>
+                            <span className='mobile-hide-inline marginRight20'>Shipping to 91001</span>  <Icon name="downarrow"> </Icon>
                         </div>
-                        <div className='deskTopHide'>Shipping to 91001</div>
+                        <div className='desktop-hide'>Shipping to 91001</div>
                     </div>
                     <div className='section2'>
                         <div className='shippingtitle2'>
                             Enter a Coupen Code
                         </div>
                         <div className='shippingsummery'>
-                            <span className='mobileHideInline marginRight20'>$5 discount applied</span>
+                            <span className='mobile-hide-inline marginRight20'>$5 discount applied</span>
                             <Anchor><Icon name="downarrow"> </Icon></Anchor>
                         </div>
-                        <div className='deskTopHide'>$5 discount applied</div>
+                        <div className='desktop-hide'>$5 discount applied</div>
                     </div>
                     <div className='section3'>
                         <div className='shippingtitle3'>

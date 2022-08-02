@@ -11,7 +11,7 @@ import { ADDED_PRODUCT_TO_BAG_MESSAGE, ColorFilter, PRODUCT_ALREADY_EXITS, SizeF
 import LocalService from "../../../services/LocalService/LocalService";
 import { useNavigate } from 'react-router-dom'
 import Helper from "../../../helper/Helper";
-import { Anchor, Button, Image, Paragraph, ProductGallery } from "../../atoms";
+import { Anchor, Button, Paragraph, ProductGallery } from "../../atoms";
 import CategoryLabel from "../ProductCategory/CategoryLabel";
 
 
@@ -73,6 +73,10 @@ function ProductDetails(props) {
             <Loader isLoading={props.isLoading}></Loader>
 
             <div className="aem-Grid aem-Grid--12 Productdetails">
+                <div className="catagary desktop-hide">
+                    <CategoryLabel></CategoryLabel>
+
+                </div>
                 <div className="aem-GridColumn aem-GridColumn--default--7 aem-GridColumn--phone--12 paddingTop15">
                     {
                         images?.length > 0 &&
@@ -80,7 +84,7 @@ function ProductDetails(props) {
                     }
                 </div>
                 <div className="aem-GridColumn aem-GridColumn--default--5 aem-GridColumn--phone--12">
-                    <div className="catagary">
+                    <div className="catagary mobile-hide">
                         <CategoryLabel></CategoryLabel>
 
                     </div>
@@ -147,7 +151,7 @@ function ProductDetails(props) {
                         name={props.productData.description} >
                     </Paragraph>
                     <div className="section-enderpart">
-                    <div className="sectionender"></div>
+                        <div className="sectionender"></div>
                     </div>
                 </div>
             </div>

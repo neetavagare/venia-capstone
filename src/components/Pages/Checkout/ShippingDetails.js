@@ -1,5 +1,4 @@
 import React from 'react';
-import { AnchorV2 } from '../../atoms';
 import Icon from '../../atoms/Icon/Icon';
 
 export default function ShippingDetails(props) {
@@ -12,7 +11,7 @@ export default function ShippingDetails(props) {
                 <div onClick={props.handleShippingClick} data-type={props.type} className="cursor-pointer">
                     <Icon name="Edit-2" type={props.type}></Icon>
                 </div>
-                <h6 className="text-edit mobileHide cursor-pointer" onClick={props.handleShippingClick} data-type={props.type}>Edit</h6>
+                <h6 className="text-edit mobile-hide cursor-pointer" onClick={props.handleShippingClick} data-type={props.type}>Edit</h6>
             </div>
 
             <div className="shipping-info">

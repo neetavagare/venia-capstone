@@ -4,7 +4,8 @@ const initialState = {
     isLoading: false,
     productData: {},
     carts: [],
-    sortedProducts: []
+    sortedProducts: [],
+    categories : []
 }
 
 export default initialState;

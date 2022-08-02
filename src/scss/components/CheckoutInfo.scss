@@ -83,7 +83,10 @@
     }
 
     .zip {
-        @include input;
+        @extend .semiboldmuli-family;
+        @extend .regularsize;
+        border: 2px solid $greyL2-color;
+        border-radius: 8px;
         width: 60%;
         height: 35px;
         margin-left: 26px;

@@ -1,6 +1,4 @@
 import React from 'react';
-import Icon from '../../atoms/Icon/Icon';
-import InputBox from "../../atoms/InputBox/InputBox";
 import RadioBox from '../../atoms/RadioBox/RadioBox';
 import ShippingDetails from './ShippingDetails';
 export default function ShppingSection(props) {
@@ -22,11 +20,11 @@ export default function ShppingSection(props) {
                 <RadioBox type="radio" id="radio-three" partailLabel={true} classValue={"radio-align"} labelclassValue={"radiotext-three"} text={"Next Delivery"} partialText={"(Next days via FedEx) $53.61"} partailclassValue={"radio-subtext"}>
                 </RadioBox>
             </div>
-            <div className='aem-Grid aem-GridColumn aem-GridColumn--default--8 aem-GridColumn--phone--12 shipping-btn mobileHide'>
-                <button className="decorationNone cursor-pointer continue-btn payment-btn" onClick={props.paymentToMethod}>continue to payment</button>
+            <div className='aem-Grid aem-GridColumn aem-GridColumn--default--8 aem-GridColumn--phone--12 shipping-btn mobile-hide'>
+                <button className="decoration-none cursor-pointer continue-btn payment-btn" onClick={props.paymentToMethod}>continue to payment</button>
             </div>
             <div className="aem-GridColumn--phone--12 btn-section">
-                <button className="decorationNone cursor-pointer mobile-continue-btn deskTopHide" onClick={props.paymentToMethod}>continue</button>
+                <button className="decoration-none cursor-pointer mobile-continue-btn desktop-hide" onClick={props.paymentToMethod}>continue</button>
             </div>
             <div className='aem-Grid aem-GridColumn aem-GridColumn--default--8 aem-GridColumn--phone--12 estimating'>
                 <div className="section2">

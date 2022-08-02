@@ -16,7 +16,7 @@ export default class RecentView extends Component {
             slidesToScroll: 2
         };
         return (
-            <div className="aem-Grid aem-Grid--12 Recentlyview mobileHide">
+            <div className="aem-Grid aem-Grid--12 Recentlyview mobile-hide">
                 <h2 className="recenttitle">Recently Viewed </h2>
                 <Slider {...settings}>
                     {

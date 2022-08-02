@@ -1,10 +1,8 @@
 import React from 'react';
 import { Button, CheckBox } from '../../atoms';
-import Icon from '../../atoms/Icon/Icon';
 import InputBox from "../../atoms/InputBox/InputBox";
 import RadioBox from '../../atoms/RadioBox/RadioBox';
 import ShippingDetails from './ShippingDetails';
-import AnchorV2 from '../../atoms/AnchorV2/AnchorV2';
 
 export default function PaymentSelection(props) {
     return (
@@ -39,12 +37,12 @@ export default function PaymentSelection(props) {
                 </RadioBox>
             </div>
             <div className='aem-Grid aem-GridColumn aem-GridColumn--default--8 aem-GridColumn--phone--12  shipping-btn'>
-                <Button onClick={props.reviewToOrder} classValue="decorationNone cursor-pointer payment-btn">
+                <Button onClick={props.reviewToOrder} classValue="decoration-none cursor-pointer payment-btn">
                     continue to review order
                 </Button>
             </div>
             <div className="aem-GridColumn--phone--12 btn-section">
-                <Button onClick={props.reviewToOrder} classValue="decorationNone cursor-pointer mobile-continue-btn deskTopHide">
+                <Button onClick={props.reviewToOrder} classValue="decoration-none cursor-pointer mobile-continue-btn desktop-hide">
                     continue
                 </Button>
             </div>

@@ -1,5 +1,4 @@
 import React from "react";
-import { useNavigate } from 'react-router-dom';
 import { AnchorV2, Icon } from "../../atoms";
 import OrderItem from "../Checkout/OrderItem";
 import { useState } from "react";
@@ -50,7 +49,7 @@ export default function OrderSuccess(props) {
                     <OrderItem cartItems={items}></OrderItem>
                 </div>
               
-                <div className="aem-GridColumn aem-GridColumn--default--4 mobileHide add-cart">
+                <div className="aem-GridColumn aem-GridColumn--default--4 mobile-hide add-cart">
                     <div className="add-cart-text">
                         Give us a follow 
                         <p className="add-cart-two">to SAVE 20% on your next.</p>

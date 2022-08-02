@@ -24,7 +24,7 @@ body {
     display: block;
 }
 
-.mobileHide {
+.mobile-hide {
     display: block;
 }
 
@@ -36,15 +36,15 @@ body {
     display: block;
 }
 
-.deskTopHide {
+.desktop-hide {
     display: none;
 }
 
-.mobileHideInline {
+.mobile-hide-inline {
     display: inline;
 }
 
-.decorationNone {
+.decoration-none {
     text-decoration: none;
 }
 
@@ -90,19 +90,19 @@ body {
         width: 100% !important;
     }
 
-    .mobileHide {
+    .mobile-hide {
         display: none;
     }
 
     .boximg {
         display: block;
 
-        .mobileHide {
+        .mobile-hide {
             display: none;
         }
     }
 
-    .deskTopHide {
+    .desktop-hide {
         display: block;
     }
 
@@ -139,7 +139,7 @@ body {
         padding: 0px !important;
     }
 
-    .mobileHideInline {
+    .mobile-hide-inline {
         display: none;
     }
 
@@ -159,6 +159,11 @@ body {
         .shopbagicon {
             text-decoration: none;
         }
+    }
+
+    .cvv-field {
+        width: 71% !important;
+        max-width: 100%;
     }
 
     .results {
@@ -249,14 +254,20 @@ body {
         padding-right: 0;
     }
 
+    .text-decoration-underline{
+        margin-left: 20px !important;
+    }
 
     .take-of-section {
         @include mobile-padding;
+        display: flex;
+        flex-direction: column-reverse;
         padding-left: 0;
         padding-right: 0;
 
         .sign-leggings {
             text-align: center;
+            font-size: 36px !important;
         }
 
         .sub-para {
@@ -297,6 +308,7 @@ body {
     .adventure-container {
         flex-direction: column;
         padding: 0;
+        margin-bottom: 40px;
     }
 
     .adventure-content {
@@ -312,16 +324,23 @@ body {
         .hide {
             display: none;
         }
-
     }
 
-    .field .country-dropdown,
-    .state-dropdown,
-    .email {
+    .country-dropdown,
+    .state-dropdown {
+        width: 100% !important;
+        border: 2px solid #B5B7BC;
+        border-radius: 8px;
+        height: 45px !important;
+        max-width: 100% !important;
+    }
+
+    .field .email {
         width: 100% !important;
         border: 2px solid #B5B7BC;
         border-radius: 8px;
         height: 34px !important;
+        max-width: 100% !important;
     }
 
     .mobile-container {
@@ -336,12 +355,12 @@ body {
         margin-bottom: 0 !important;
     }
 
-    .field{
+    .field {
         .label-zip {
             margin-left: 0px;
         }
     }
-    
+
     .checkoutend,
     .address-section,
     .name-section {
@@ -351,6 +370,7 @@ body {
     .zip {
         width: 100% !important;
         margin-left: 0 !important;
+        max-width: 100%;
     }
 
     .btn-section {
@@ -361,6 +381,11 @@ body {
             width: 192px;
             margin: auto;
         }
+    }
+
+    .payment-section .field {
+        width: 100%;
+        max-width: 101%;
     }
 
     .content-one {
@@ -441,6 +466,10 @@ body {
                 border: 1px solid $primary-brand;
                 background: var(--$primary-brand) 0% 0% no-repeat padding-box;
                 background: $primary-brand 0% 0% no-repeat padding-box;
+
+                &:hover {
+                    background-color: $primary-D1;
+                }
             }
         }
 
@@ -506,6 +535,41 @@ body {
     .boximg .blackbox {
         padding: 100px 36px;
     }
+
+    .boximg {
+        .colorbox {
+            font-size: 30px;
+        }
+    }
+
+    .take-of-section {
+        .takeoff-text {
+            padding-left: 0;
+            padding-top: 0;
+        }
+    }
+
+    .page-container,
+    .adds-container,
+    .home-product-container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .home-slider {
+        .home-banner {
+            padding-left: 20px;
+            padding-right: 20px;
+
+            .signature {
+                padding-top: 10px;
+                margin: 0;
+                font-size: 37px;
+            }
+        }
+
+    }
+
 }
 
 @media (min-width: 2000px) {
@@ -514,5 +578,17 @@ body {
             height: auto;
         }
     }
+}
 
+
+@media (max-width:320px) {
+    .mobile-gradient {
+        .transbox-para {
+            top: 25%;
+        }
+
+        .sub-title-transbox {
+            font-size: 33px;
+        }
+    }
 }

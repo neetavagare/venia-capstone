@@ -3,7 +3,6 @@ import Label from '../atoms/Label/Label';
 import { HeaderLabels } from '../../config/Constant';
 import Icon from '../atoms/Icon/Icon';
 import { Link } from 'react-router-dom';
-import DesktopBanner from '../../images/Product_Images/DesktopBanner.png';
 import { connect } from "react-redux";
 import { useEffect } from "react";
 import { addProductToCart, replaceCart } from "../../redux/actions/index";
@@ -24,11 +23,9 @@ function Header(props) {
     // Header Of all Pages Banner row.
     return (
         <div className='container container-header'>
-            <header className='aem-Grid aem-Grid--12 max-width-header mobileHide '>
-                {/* <nav role="navigation"> */}
+            <header className='aem-Grid aem-Grid--12 max-width-header mobile-hide '>
                 <div className='aem-GridColumn aem-GridColumn--default--3 venia'>
-                <Link className="decorationNone cursor-pointer" to={"/"} >
-                    {/* <Label name="venia" className="logo"></Label> */}
+                    <Link className="decoration-none cursor-pointer" to={"/"} >
                         <Image url={veniaLogo} classValue={"logo"}></Image>
                     </Link>
                 </div>
@@ -36,10 +33,15 @@ function Header(props) {
                     <ul>
                         {
                             HeaderLabels.manuItems.map((item) => {
-                                return <li><Link className="decorationNone cursor-pointer" to={"/category"} ><Label key={item.label} name={item.label} classValue={item.className}></Label></Link></li>
+
+                                return <li><Link className="decoration-none cursor-pointer" to={item.url} >
+                                    <Label key={item.label} name={item.label} classValue={item.className}></Label></Link>
+                                    {/* <div className='header-tab'></div> */}
+                                </li>
                             })
                         }
                     </ul>
+
                 </div>
                 <div className='aem-GridColumn aem-GridColumn--default--3 header_icons'>
                     <ul >

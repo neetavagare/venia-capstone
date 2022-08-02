@@ -22,6 +22,7 @@ function App() {
         <ToastMessage time={2000}></ToastMessage>
         <Routes>
           <Route exact path="/category" element={<ProductCatagory />} />
+          <Route exact path="/category/:category" element={<ProductCatagory />} />
           <Route exact path="/cart" element={<ShopingCart />} />
           <Route exact path="/product/:id" element={<ProductDetails />} />
           <Route exact path="/" element={<HomePage />} />

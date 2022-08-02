@@ -61,9 +61,6 @@ function Guestcheckout(props) {
         setIsPayment(true);
         setIsReview(false);
     }
-    const checkoutTo = () => {
-        setCheckout(false)
-    }
 
     const handleShippingClick = (type) =>{
         let currentType = type.currentTarget.getAttribute('data-type')
@@ -116,13 +113,13 @@ function Guestcheckout(props) {
                     <OrderReview handleShippingClick={handleShippingClick} cartItems={items} handleClick={handleClick}></OrderReview>
                 }
                 {
-                    checkout && <div className="aem-Grid aem-GridColumn aem-GridColumn--default--4 sign-Section mobileHide">
+                    checkout && <div className="aem-Grid aem-GridColumn aem-GridColumn--default--4 sign-Section mobile-hide">
                         <div className="aem-Grid aem-Grid--4 aem-GridColumn--phone--12 ">
                             <div className="aem-GridColumn aem-GridColumn--default--2 signin-text">
                                 Sign in for Express Checkout
                             </div>
                             <div className="aem-GridColumn aem-GridColumn--default--2">
-                                <button className="sign-in cursor-pointer">Sign in</button>
+                                <button className="sign-in cursor-pointer" onClick={(event)=>{ event.preventDefault();}}>Sign in</button>
                             </div>
                         </div>
                     </div>

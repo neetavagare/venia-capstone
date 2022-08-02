@@ -2,7 +2,6 @@ import React from "react";
 import { CART_CHANGE_MESSAGE, CART_EMPTY_MESSAGE, LAST_CHANGE_MESSAGE, REMOVED_PRODUCT_FROM_BAG_MESSAGE } from "../../../config/Constant";
 import Icon from '../../atoms/Icon/Icon';
 import Banner from "./Banner";
-import RecentView from "./RecentView";
 import Estimaterow from './Estimaterow';
 import { connect } from "react-redux";
 import { getCarts, hideLoader, showLoader, addProductToCart, replaceCart } from "../../../redux/actions/index.js";
@@ -40,10 +39,10 @@ function ShopingCart(props) {
         Helper.showToastMessage(REMOVED_PRODUCT_FROM_BAG_MESSAGE, true);
     }
 
-    const updateCart = () => {
+    const updateCart = (isError) => {
         let cartItems = LocalService.getCart();
         props.replaceCart(cartItems);
-        Helper.showToastMessage(CART_CHANGE_MESSAGE, true);
+        Helper.showToastMessage(CART_CHANGE_MESSAGE, isError);
     }
 
     const decrementCount = (item) => {
@@ -53,12 +52,12 @@ function ShopingCart(props) {
         }
 
         LocalService.decrementCount(item);
-        updateCart();
+        updateCart(true);
     }
 
     const incrementCount = (item) => {
         LocalService.incrementCount(item);
-        updateCart();
+        updateCart(false);
     }
 
 
@@ -95,7 +94,7 @@ function ShopingCart(props) {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="aem-GridColumn aem-GridColumn--phone--1 deskTopHide">
+                                <div className="aem-GridColumn aem-GridColumn--phone--1 desktop-hide">
                                     <Icon name="more_horizantal" classValue="dot-mobile"></Icon>
                                 </div>
 
@@ -107,7 +106,7 @@ function ShopingCart(props) {
                                         <Anchor onChange={() => incrementCount(item)}> <Icon name="plus" > </Icon> </Anchor>
                                     </div>
                                 </div>
-                                <div className='aem-GridColumn aem-GridColumn--default--4 trashIcon mobileHide'>
+                                <div className='aem-GridColumn aem-GridColumn--default--4 trashIcon mobile-hide'>
                                     <div className="button-spacer">
                                         <Icon name="Edit2"> </Icon>
                                         <span className="trash">Edit item</span>

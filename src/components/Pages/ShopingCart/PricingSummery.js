@@ -22,19 +22,19 @@ export default function PricingSummery(props) {
                     <div className="gift">Gift Card</div>
                     <div className="tax">
                         {
-                            isCheckout == true ?
+                            isCheckout === true ?
                                 "Tax" : "Estimated tax"
                         }
                     </div>
                     <div className="shhipping">
                         {
-                            isCheckout == true ?
+                            isCheckout === true ?
                                 "shipping" : "Estimated shipping"
                         }
                     </div>
                     <div className="total ">
                         {
-                            isCheckout == true ?
+                            isCheckout === true ?
                                 "Total" : "Estimated Total"
                         }
                     </div>
@@ -52,7 +52,7 @@ export default function PricingSummery(props) {
                 isCart &&
                 <React.Fragment>
                     <div className="aem-Grid aem-Grid--12 textAlignCenter">
-                        <Link className="decorationNone cursor-pointer" to={"/checkout"} ><Button classValue="checkoutbtn">
+                        <Link className="decoration-none cursor-pointer" to={"/checkout"} ><Button classValue="checkoutbtn">
                             <span> <Icon name="lock"> </Icon>  checkout</span>
                         </Button>
                         </Link>

@@ -58,10 +58,10 @@ export default function CheckoutInfo(props) {
                     </div>
                 </div>
                 <div className="next-page aem-GridColumn--phone--12 ">
-                    <button className="decorationNone cursor-pointer continue-btn mobileHide" onClick={props.shippingToMethod}>continue to shipping method</button>
+                    <button className="decoration-none cursor-pointer continue-btn mobile-hide" onClick={props.shippingToMethod}>continue to shipping method</button>
                 </div>
                 <div className="aem-GridColumn--phone--12 btn-section">
-                    <button className="decorationNone cursor-pointer mobile-continue-btn deskTopHide" onClick={props.shippingToMethod}>continue</button>
+                    <button className="decoration-none cursor-pointer mobile-continue-btn desktop-hide" onClick={props.shippingToMethod}>continue</button>
                 </div>
                 <div className='aem-Grid aem-GridColumn aem-GridColumn--default--8 aem-GridColumn--phone--12 estimating'>
                     <div className="section1">

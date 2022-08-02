@@ -7,7 +7,7 @@ export default function ProductGallery(props) {
     let fullScreen = props.showFullscreenButton ? true : false;
     // const isMobile = width < 900
     const [width] = UseWindowSize();
-    const isMobile = width < 900;
+    const isMobile = width < 769;
 
     return (
         <ImageGallery showPlayButton={false} showFullscreenButton={fullScreen} showBullets={isMobile ? true : false} thumbnailPosition={isMobile ? "bottom" : "left"} items={props.images} showThumbnails={isMobile ? false : true} />

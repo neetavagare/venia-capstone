@@ -9,23 +9,28 @@ export const HeaderLabels = {
     manuItems: [
         {
             label: "Home",
-            className: "text1"
+            className: "text1",
+            url : "/"
         },
         {
             label: "Women",
-            className: "text1"
+            className: "text1",
+            url : "/category/women's clothing"
         },
         {
             label: "Men",
-            className: "text2"
+            className: "text2",
+            url : "/category/men's clothing"
         },
         {
-            label: "Smart Gear",
-            className: "text3"
+            label: "Electronics",
+            className: "text3",
+            url : "/category/electronics"
         },
         {
-            label: "Accessories",
-            className: "text4"
+            label: "Jewellery",
+            className: "text4",
+            url : "/category/jewelery"
         },
 
     ],

@@ -1,7 +1,6 @@
 import React from "react";
 import Icon from "../../atoms/Icon/Icon";
-import Banner from '../../../images/Product_Images/Banner.png';
-import { DropDown, Image } from "../../atoms";
+import { DropDown } from "../../atoms";
 import { Anchor } from '../../atoms';
 import ProductItem from "./ProductItem";
 import CategoryLabel from "./CategoryLabel";
@@ -16,10 +15,10 @@ export default function ProductListing(props) {
         <section>
             <div className="aem-Grid aem-Grid--12 results-view">
 
-                <div className="aem-Grid aem-Grid--12 deskTopHide catagories">
+                <div className="aem-Grid aem-Grid--12 desktop-hide catagories">
                     <CategoryLabel></CategoryLabel>
                 </div>
-                <div className="aem-Grid aem-Grid--4 deskTopHide mobile-view">
+                <div className="aem-Grid aem-Grid--4 desktop-hide mobile-view">
                     <div className="aem-GridColumn aem-GridColumn--phone--2 slider">
                         <Anchor><Icon name="slider"> </Icon></Anchor>
                         <Anchor href="" classValue="slidertext"
@@ -33,7 +32,7 @@ export default function ProductListing(props) {
                     </div>
                 </div>
                 <div className="aem-Grid aem-Grid--12 catagory">
-                    <div className="aem-GridColumn aem-GridColumn--default--3 mobileHide">
+                    <div className="aem-GridColumn aem-GridColumn--default--3 mobile-hide">
                         <CategoryLabelMobile></CategoryLabelMobile>
                     </div>
 
@@ -42,7 +41,7 @@ export default function ProductListing(props) {
                     <div className="aem-GridColumn aem-GridColumn--default--1 aem-GridColumn--phone--12">
                         <div className="results">  {props.data?.length ?? 0} Results</div>
                     </div>
-                    <div className="aem-GridColumn aem-GridColumn--default--8 mobileHide">
+                    <div className="aem-GridColumn aem-GridColumn--default--8 mobile-hide">
                         <div>
                             <DropDown classValue="dropdownn" options={DropDownOptions} onChange={props.sortByCategory}></DropDown>
                         </div>
@@ -52,11 +51,11 @@ export default function ProductListing(props) {
 
                 {/* Filter Reusable Component */}
 
-                <div className="aem-GridColumn aem-GridColumn--default--3 productFilters mobileHide">
+                <div className="aem-GridColumn aem-GridColumn--default--3 productFilters mobile-hide">
                     <div className="filtertitle">Filters</div>
                     <div className="filter">Categories</div>
                     <div className="aem-Grid aem-Grid--3">
-                        <FiltersComponent handleClick={props.handleClick}></FiltersComponent>
+                        <FiltersComponent handleClick={props.handleClick} categories={props.categories}></FiltersComponent>
                     </div>
                 </div>
 

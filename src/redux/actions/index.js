@@ -6,6 +6,12 @@ export function getProducts (params){
       params
    }
 }
+export function setCategories(payload){
+   return{
+      type:actionTypes.GET_CATEGORY_LIST,
+      payload
+    }
+}
 
 export function getCategoryProducts(payload){
    return{

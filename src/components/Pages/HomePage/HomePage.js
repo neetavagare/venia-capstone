@@ -20,14 +20,14 @@ export default function HomePage() {
     }
     const [width] = UseWindowSize();
 
-    const isMobile = width < 900;
+    const isMobile = width < 769;
     
 
     const renderItemFunction = (item) => {
         var deskTopText =
             <div className="aem-Grid aem-Grid--12  home-slider">
                 <div className="aem-Grid aem-Grid--12 aem-GridColumn--tablet--12">
-                    <div className='aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--12 mobileHide home-banner'>
+                    <div className='aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--12 mobile-hide home-banner'>
                         <h1 className="signature">Shop the new Signature Collection</h1>
                         <div className="signaturepara">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -37,7 +37,7 @@ export default function HomePage() {
                             <button className="shopnowbtn" onClick={handleClick}>shop now</button>
                         </div>
                     </div>
-                    <div className='aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--12 mobileHide'>
+                    <div className='aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--12 mobile-hide'>
                         <Image alt={""} url={signature} classValue="signature-img"></Image>
                     </div>
                 </div>
