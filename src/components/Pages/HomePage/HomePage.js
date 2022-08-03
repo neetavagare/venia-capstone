@@ -11,6 +11,7 @@ import { Image, ProductGallery } from "../../atoms";
 import mapLocation from '../../../images/svgIcons/map-pin.svg';
 import { useNavigate } from 'react-router-dom'
 import UseWindowSize from "../../atoms/UseWindowSize/UseWindowSize";
+import Helper from "../../../helper/Helper";
 
 export default function HomePage() {
     let navigate = useNavigate();
@@ -22,6 +23,7 @@ export default function HomePage() {
 
     const isMobile = width < 769;
     
+    Helper.addSelectedElement();
 
     const renderItemFunction = (item) => {
         var deskTopText =

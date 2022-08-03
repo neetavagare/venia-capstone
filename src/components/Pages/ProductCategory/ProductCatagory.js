@@ -22,7 +22,7 @@ function ProductCatagory(props) {
 
     (async () => {
       props.showLoader()
-
+      Helper.addSelectedElement();
       var results = await Promise.all([
         CategoryService.getCategories(),
         ProductService.getCategory()

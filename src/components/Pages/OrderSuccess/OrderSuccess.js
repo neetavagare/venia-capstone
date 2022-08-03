@@ -3,6 +3,7 @@ import { AnchorV2, Icon } from "../../atoms";
 import OrderItem from "../Checkout/OrderItem";
 import { useState } from "react";
 import LocalService from "../../../services/LocalService/LocalService";
+import Helper from "../../../helper/Helper";
 
 export default function OrderSuccess(props) {
 
@@ -11,7 +12,7 @@ export default function OrderSuccess(props) {
     useState(async () => {
         let cartItems = LocalService.getCart();
         setItems(cartItems);
-
+        Helper.addSelectedElement();
     }, []);
 
     return (

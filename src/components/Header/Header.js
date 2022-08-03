@@ -35,8 +35,10 @@ function Header(props) {
                             HeaderLabels.manuItems.map((item) => {
 
                                 return <li><Link className="decoration-none cursor-pointer" to={item.url} >
-                                    <Label key={item.label} name={item.label} classValue={item.className}></Label></Link>
-                                    {/* <div className='header-tab'></div> */}
+                                    <Label key={item.label} name={item.label} classValue={item.className}></Label>
+                                    <div className='header-tab' data-active={item.url}></div>
+                                </Link>
+
                                 </li>
                             })
                         }

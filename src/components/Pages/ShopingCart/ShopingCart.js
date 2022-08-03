@@ -25,6 +25,7 @@ function ShopingCart(props) {
     useState(async () => {
         props.showLoader();
         props.getCarts();
+        Helper.addSelectedElement();
         props.hideLoader();
     }, []);
 

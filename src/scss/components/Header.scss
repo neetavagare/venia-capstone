@@ -19,14 +19,20 @@
         position: sticky;
         top: 0;
         z-index: 100;
-        padding: 12px;
+        padding: 14px;
     }
 
     .header-tab {
         width: 60px;
         height: 7px;
+        position: absolute;
+        top : 50px;
         border: 1px solid $Tab-color;
         background-color: $Primery-L1;
+        display: none;
+    }
+    .header-tab.active{
+        display: block;
     }
 
     .venia {
