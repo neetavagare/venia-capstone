@@ -22,7 +22,7 @@ export default function HomePage() {
     const [width] = UseWindowSize();
 
     const isMobile = width < 769;
-    
+
     Helper.addSelectedElement();
 
     const renderItemFunction = (item) => {
@@ -97,28 +97,36 @@ export default function HomePage() {
             <section className="home-product-container">
                 <div className='aem-Grid aem-Grid--12 home-container'>
                     <div className='aem-GridColumn aem-GridColumn--default--3 aem-GridColumn--phone--12 mask-grp-one'>
-                        <Image alt={""} url={women} classValue="womenimg"></Image>
+                        <div className="catagory-products">
+                            <Image alt={""} url={women} classValue="womenimg"></Image>
+                        </div>
                         <div className="title-block1">
                             <h4 className="shop-women">Shop Women</h4>
                             <div className="loream-text1">Lorem ipsum dolor sit amet</div>
                         </div>
                     </div>
                     <div className='aem-GridColumn aem-GridColumn--default--3 aem-GridColumn--phone--12 mask-grp-one'>
-                        <Image alt={""} url={mens} classValue="mensimg"></Image>
+                        <div className="catagory-products">
+                            <Image alt={""} url={mens} classValue="mensimg"></Image>
+                        </div>
                         <div className="title-block2">
                             <h4 className="shop-men">Shop Men</h4>
                             <div className="loream-text2">Lorem ipsum dolor sit amet</div>
                         </div>
                     </div>
                     <div className='aem-GridColumn aem-GridColumn--default--3 aem-GridColumn--phone--12 mask-grp-one'>
-                        <Image alt={""} url={jewellery} classValue="jewelleryimg"></Image>
+                        <div className="catagory-products">
+                            <Image alt={""} url={jewellery} classValue="jewelleryimg"></Image>
+                        </div>
                         <div className="title-block3">
                             <h4 className="shop-jewellery">Shop Jewellery</h4>
                             <div className="loream-text3">Lorem ipsum dolor sit amet</div>
                         </div>
                     </div>
                     <div className='aem-GridColumn aem-GridColumn--default--3 aem-GridColumn--phone--12 mask-grp-one'>
-                        <Image alt={""} url={electronics} classValue="electronicsimg"></Image>
+                        <div className="catagory-products">
+                            <Image alt={""} url={electronics} classValue="electronicsimg"></Image>
+                        </div>
                         <div className="title-block4">
                             <h4 className="shop-electronics">Shop Electronics</h4>
                             <div className="loream-text4">Lorem ipsum dolor sit amet</div>

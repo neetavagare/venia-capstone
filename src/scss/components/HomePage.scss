@@ -66,23 +66,27 @@
         padding-top: 20px;
     }
 
+    .catagory-products{
+        text-align: center;
+    }
+
     .womenimg {
-        width: 100% !important;
+        width: 96% !important;
         @extend .hero-catagory;
     }
 
     .mensimg {
-        width: 100% !important;
+        width: 96% !important;
         @extend .hero-catagory;
     }
 
     .jewelleryimg {
-        width: 100% !important;
+        width: 96% !important;
         @extend .hero-catagory;
     }
 
     .electronicsimg {
-        width: 100% !important;
+        width: 96% !important;
         @extend .hero-catagory;
     }
 
@@ -96,6 +100,7 @@
 
     .title-block2 {
         @include hero-catagory;
+        margin-top: -84px !important;
         .loream-text2 {
             @include hero-catagorytext;
         }
@@ -112,7 +117,7 @@
 
     .title-block4 {
         @include hero-catagory;
-
+        margin-top: -84px !important;
         .loream-text4 {
             @include hero-catagorytext;
         }
