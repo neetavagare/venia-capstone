@@ -57,6 +57,22 @@ body {
     color: $unnamed-color;
 }
 
+.mobileheader {
+
+    .cart-count {
+        width: 20px;
+        position: absolute;
+        background: $primary-M1;
+        height: 20px;
+        text-align: center;
+        color: white;
+        border-radius: 8px;
+        margin-top: -7px;
+        margin-left: -7px;
+    }
+}
+
+
 /* Phone Breakpine*/
 @media (max-width: 768px) {
 
@@ -80,6 +96,10 @@ body {
         border: none;
         box-shadow: none;
 
+    }
+
+    .empty-container {
+        margin-bottom: 30px;
     }
 
     .precaution {
@@ -164,6 +184,10 @@ body {
     .cvv-field {
         width: 71% !important;
         max-width: 100%;
+    }
+
+    .label-cvv{
+        margin-left: 10px;
     }
 
     .results {
@@ -254,7 +278,7 @@ body {
         padding-right: 0;
     }
 
-    .text-decoration-underline{
+    .text-decoration-underline {
         margin-left: 20px !important;
     }
 

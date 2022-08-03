@@ -1,6 +1,36 @@
 @import '../partials/variables';
 @import '../common/mixin.scss';
 
+.empty-container {
+    .cart-empty-message {
+        text-align: center;
+        color: $primary-brand;
+        font-size: 30px;
+    }
+
+    h3 {
+        text-align: center;
+
+    }
+    .cart-shop-now-container {
+        text-align: center;
+        .cart-shop-now {
+            border: 2px solid $white-color;
+            border-radius: 10px;
+            color: $white-color;
+            background-color: $primary-brand;
+            font-size: 14px;
+            text-transform: uppercase;
+            padding: 12px 70px;
+
+            &:hover{
+                background-color: $primary-D1;
+            }
+        }
+    }
+
+}
+
 .cart-container {
     margin-bottom: 30px;
 
@@ -15,7 +45,8 @@
 
     .remove-btn {
         cursor: pointer;
-        &:hover{
+
+        &:hover {
             color: $primary-D1;
         }
     }
@@ -79,7 +110,7 @@
 
 }
 
-.checkout-pricing-spacing{
+.checkout-pricing-spacing {
     margin-top: 75px;
 }
 
@@ -144,7 +175,7 @@
         border-radius: 28px;
         background-color: $primary-brand;
 
-        &:hover{
+        &:hover {
             background-color: $primary-D1;
         }
     }

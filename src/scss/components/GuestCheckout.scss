@@ -33,6 +33,7 @@
     .signin-text {
         @include muli-sizetwenty;
         @include text-color;
+        font-weight: 600;
     }
 
     .sign-in {
@@ -110,6 +111,7 @@
     .section2,
     .section1 {
         @include ptitle;
+        font-weight: 600;
         color: $shipping-color;
         padding: 20px 20px 20px 0;
         border-top: 1px solid $border-color;

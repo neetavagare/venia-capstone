@@ -337,7 +337,7 @@ export const CategoriesFilter = [{
 
 export const APIBASE_URL = 'https://fakestoreapi.com';
 export const CART_LOCAL_STORAGE_VALUE = "cartsData";
-export const CART_EMPTY_MESSAGE = " Cart is empty. Please add product to cart. ";
+export const CART_EMPTY_MESSAGE = "Your Shop Bag is Empty!";
 export const CART_CHANGE_MESSAGE = "Updated Cart";
 export const LAST_CHANGE_MESSAGE = "Should not remove last quantity.";
 export const PRODUCT_ALREADY_EXITS = "Product is already available in Cart.";

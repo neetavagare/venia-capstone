@@ -25,7 +25,7 @@ export default function PaymentSelection(props) {
                 </div>
                 <div className='aem-Grid aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--12 end-field'>
                     <InputBox label="Expiration Date" type={"text"} name={'email'} classValue={'date-field'} />
-                    <InputBox label="CVV" isIcon={true} type={"number"} name={'email'} classValue={'cvv-field'} />
+                    <InputBox label="CVV" labelClass="label-cvv" isIcon={true} type={"number"} name={'email'} classValue={'cvv-field'} />
                 </div>
             </div>
             <div className='billing-checkbox-container'>

@@ -26,9 +26,10 @@ export default function FooterContent() {
                 </div>
                 <div className='aem-GridColumn aem-GridColumn--default--3 aem-GridColumn--phone--12'>
                     <AnchorV2> <h6 className='follow'>Follow Us!</h6></AnchorV2>
-                    <AnchorV2> <Paragraph classValue='ftext8' name='Lorem ipsum dolor sit'></Paragraph></AnchorV2>
-                    <AnchorV2><Paragraph classValue='ftext9' name='consectetur adipiscing elit'></Paragraph></AnchorV2>
-                    <AnchorV2><Paragraph classValue='ftext10' name='sed do eiusmod'></Paragraph></AnchorV2>
+                    <AnchorV2> <Paragraph classValue='ftext8' name='Lorem ipsum dolor sit amet, '></Paragraph></AnchorV2>
+                    <AnchorV2><Paragraph classValue='ftext9' name='consectetur adipiscing elit, '></Paragraph></AnchorV2>
+                    <AnchorV2><Paragraph classValue='ftext10' name='sed do eiusmod tempor incididunt ut'></Paragraph></AnchorV2>
+                    <AnchorV2><Paragraph classValue='ftext10' name='labore et dolore.'></Paragraph></AnchorV2>
                     <span>
                         <AnchorV2><Icon name="insta"> </Icon></AnchorV2>
                         <AnchorV2><Icon name="facebook"> </Icon></AnchorV2>
