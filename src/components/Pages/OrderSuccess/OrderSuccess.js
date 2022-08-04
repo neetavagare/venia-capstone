@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { AnchorV2, Icon } from "../../atoms";
 import OrderItem from "../Checkout/OrderItem";
 import { useState } from "react";
@@ -9,11 +9,15 @@ export default function OrderSuccess(props) {
 
     let [items, setItems] = useState([])
 
-    useState(async () => {
+    useEffect( () => {
         let cartItems = LocalService.getCart();
         setItems(cartItems);
         Helper.addSelectedElement();
+        Helper.showToastMessage("Your order has been successfully placed ! Thank you :)")
+        
     }, []);
+    
+
 
     return (
         <section className="page-container order-succes-section">

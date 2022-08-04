@@ -25,14 +25,14 @@ export default function ProductListing(props) {
                             name='Filter Results'
                         ></Anchor>
                     </div>
-                    <div className="aem-GridColumn aem-GridColumn--phone--2 updownarrow">
+                    <div className="aem-GridColumn aem-GridColumn--phone--2 updownarrow cursor-pointer">
                         <Anchor><Icon name="uparrow"> </Icon></Anchor>
                         <Anchor><Icon name="down-arrow"> </Icon></Anchor>
                         <Anchor href="" className="sorttext" name='Sort Product'></Anchor>
                     </div>
                 </div>
                 <div className="aem-Grid aem-Grid--12 catagory">
-                    <div className="aem-GridColumn aem-GridColumn--default--3 mobile-hide">
+                    <div className="aem-GridColumn aem-GridColumn--default--3 mobile-hide cursor-pointer">
                         <CategoryLabelMobile></CategoryLabelMobile>
                     </div>
 

@@ -1,7 +1,7 @@
 import { Anchor } from "../../atoms";
 
 const Pagination = (props) => {
-    if(!props.totalItem){
+    if (!props.totalItem) {
         return null;
     }
     return (
@@ -12,6 +12,9 @@ const Pagination = (props) => {
                         <Anchor classValue="cursor-pointer" name={index + 1}></Anchor> </li>
                 })
             }
+            <li>
+                <a className="cursor-pointer">&#62;</a>
+            </li>
         </ul >
     )
 }

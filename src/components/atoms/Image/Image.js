@@ -5,6 +5,6 @@ export default function Image(props) {
     let classNm = props.classValue ? props.classValue : ""
 
     return (
-        <img className={classNm} alt={props.alt ? props.alt : ""} src={props.url} />
+        <img loading="lazy" className={classNm} alt={props.alt ? props.alt : ""} src={props.url} />
     )
 }

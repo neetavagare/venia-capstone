@@ -91,18 +91,22 @@ function ProductDetails(props) {
                     <h2 className="peekbag">{props.productData.title}</h2>
                     <div className="detailprice">${props.productData.price}</div>
                     <div className="starIcon">
-                        <RatingStar count={props.productData?.rating?.rate}></RatingStar><span className="startCount"> ({props.productData?.rating?.count}) </span>
+                        <RatingStar count={props.productData?.rating?.rate}></RatingStar><span className="startCount cursor-pointer"> ({props.productData?.rating?.count}) </span>
                     </div>
                     <div className="loreamdetail">{props.productData.description?.substring(0, 100)}.
                         <span>
-                            <Anchor classValue="readmore" name="Read More"></Anchor>
+                            <Anchor classValue="readmore cursor-pointer" name="Read More"></Anchor>
                         </span>
                     </div>
 
                     <div>
-                        <Paragraph classValue="quantity" name="Quantity"></Paragraph>
-                        <div className="incrementbtn">
+                        <Paragraph classValue="quantity " name="Quantity"></Paragraph>
+                        <div className="incrementbtn cursor-pointer">
                             <Button onClick={() => {
+                                if(count == 1){
+                                    Helper.showToastMessage("Can not set 0 zero")
+                                    return;
+                                }
                                 if (count <= 0) {
                                     //setcount(0)
                                     props.getProductsCountSuccess(count + 1);
@@ -111,11 +115,11 @@ function ProductDetails(props) {
                                     props.getProductsCountSuccess(count + 1);
                                 }
                             }}
-                                classValue="btn-background"
-                            ><Anchor><Icon name="minus" className="minusIcon" > </Icon></Anchor></Button>
-                            <Button classValue={"quanrbtn"}>{count}</Button>
+                                classValue="btn-background cursor-pointer"
+                            ><Anchor><Icon name="minus" className="minusIcon cursor-pointer" > </Icon></Anchor></Button>
+                            <Button classValue={"quanrbtn cursor-pointer"}>{count}</Button>
 
-                            <Button classValue="btn-background" onClick={
+                            <Button classValue="btn-background cursor-pointer" onClick={
                                 () => {
                                     props.getProductsCountSuccess(count + 1);
                                     setcount(count + 1)
@@ -131,13 +135,13 @@ function ProductDetails(props) {
                     </div>
                     <div className="svgicontext">
                         <div className="svgIcon">
-                            <span className="saveIcon">
+                            <span className="saveIcon cursor-pointer">
                                 <Anchor><Icon name="hurt"></Icon></Anchor>
                                 <Anchor><span className="saving">Save</span></Anchor>
                             </span>
                             <span>
                                 <Anchor><Icon name="share-2"> </Icon></Anchor>
-                                <Anchor><span className="sharing">Share</span></Anchor>
+                                <Anchor><span className="sharing cursor-pointer">Share</span></Anchor>
                             </span>
                         </div>
                     </div>

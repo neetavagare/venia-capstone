@@ -57,7 +57,7 @@ export default function PricingSummery(props) {
                         </Button>
                         </Link>
                     </div>
-                    <div className="aem-Grid aem-Grid--12 textAlignCenter" >
+                    <div className="aem-Grid aem-Grid--12 textAlignCenter cursor-pointer" >
                         <Button classValue="paypal-exp">
                             <Image alt={'Payplay'} url={ppbtn} classValue="paypalbtn"></Image>
                         </Button>

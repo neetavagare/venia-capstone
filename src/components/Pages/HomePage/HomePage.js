@@ -36,7 +36,7 @@ export default function HomePage() {
                             Ut enim consectetur.
                         </div>
                         <div>
-                            <button className="shopnowbtn" onClick={handleClick}>shop now</button>
+                            <button className="shopnowbtn cursor-pointer" onClick={handleClick}>shop now</button>
                         </div>
                     </div>
                     <div className='aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--12 mobile-hide'>
@@ -60,7 +60,7 @@ export default function HomePage() {
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                     </div>
                     <div className="transbox-btn">
-                        <button className="shopnow-transbox-btn" onClick={handleClick}>shop now</button>
+                        <button className="shopnow-transbox-btn cursor-pointer" onClick={handleClick}>shop now</button>
                     </div>
                 </div>
 
@@ -142,9 +142,9 @@ export default function HomePage() {
                         <div className="subtext">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor labore dolore magna lorem ipsum
                         </div>
-                        <div className="shop-buttons">
-                            <button className="shopcollection" onClick={handleClick}>shop collection</button>
-                            <button className="shopnowbtn" onClick={handleClick}>shop now</button>
+                        <div className="shop-buttons cursor-pointer">
+                            <button className="shopcollection cursor-pointer" onClick={handleClick}>shop collection</button>
+                            <button className="shopnowbtn cursor-pointer" onClick={handleClick}>shop now</button>
                         </div>
                         <div className="fat-line"></div>
                     </div>
@@ -166,7 +166,7 @@ export default function HomePage() {
                         <div className="adventure-sub-content">
                             <h2>Conquer your <span className="hide">next adventure</span></h2>
                             <p>Lorem Ipsum Dolor Tempor</p>
-                            <button className="shop-device-btn" onClick={handleClick}>
+                            <button className="shop-device-btn cursor-pointer" onClick={handleClick}>
                                 shop devices
                             </button>
                         </div>
