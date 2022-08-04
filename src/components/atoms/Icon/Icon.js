@@ -66,8 +66,8 @@ export default function Icon(props) {
             }
             {labelName === 'Edit2' &&
                 <span className='edit2' data-type={type}>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="22.061" height="21.828" viewBox="0 0 22.061 21.828" role={"img"} data-type={type}> 
-                        <path id="edit-2" d="M17,3a2.828,2.828,0,0,1,4,4L7.5,20.5,2,22l1.5-5.5Z" transform="translate(-1 -1.172)" fill="none" stroke="#172026" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"  data-type={type}/>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22.061" height="21.828" viewBox="0 0 22.061 21.828" role={"img"} data-type={type}>
+                        <path id="edit-2" d="M17,3a2.828,2.828,0,0,1,4,4L7.5,20.5,2,22l1.5-5.5Z" transform="translate(-1 -1.172)" fill="none" stroke="#172026" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" data-type={type} />
                     </svg>
                 </span>
             }
@@ -281,6 +281,17 @@ export default function Icon(props) {
                             <circle id="Ellipse_137" data-name="Ellipse 137" cx="1" cy="1" r="1" transform="translate(4 11)" fill="none" stroke="#172026" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
                         </g>
                     </svg>
+                </span>
+            }
+            { labelName === 'cross_Icon' &&
+                <span className='cross-Icon'> 
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14.828" height="14.828" viewBox="0 0 14.828 14.828">
+                        <g id="x" transform="translate(-4.586 -4.586)">
+                            <line id="Line_624" data-name="Line 624" x1="12" y2="12" transform="translate(6 6)" fill="none" stroke="#1D1D1B" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                            <line id="Line_625" data-name="Line 625" x2="12" y2="12" transform="translate(6 6)" fill="none" stroke="#1D1D1B" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                        </g>
+                    </svg>
+
                 </span>
             }
         </span>

@@ -1,6 +1,8 @@
 import { CategoriesFilter } from "../../../config/Constant";
 import React from "react";
 import AnchorV2 from "../AnchorV2/AnchorV2";
+import Anchor from "../Anchor/Anchor";
+import Icon from "../Icon/Icon";
 
 const MobileMenu = (props) => {
 
@@ -10,7 +12,7 @@ const MobileMenu = (props) => {
                 <ul>
                     <li className="filters">Shop Categories</li>
                     <li onClick={props.closeSideBar}>
-                        X
+                        <Anchor><Icon name="cross_Icon"></Icon></Anchor>
                     </li>
                 </ul>
             </nav>

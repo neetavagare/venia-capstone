@@ -1,5 +1,7 @@
 import { CategoriesFilter } from "../../../config/Constant";
 import CheckBox from "../CheckBox/CheckBox";
+import Icon from '../Icon/Icon';
+import Anchor from '../Anchor/Anchor';
 import React from "react";
 
 const SideBar = (props) => {
@@ -11,7 +13,9 @@ const SideBar = (props) => {
                 <ul>
                     <li className="filters">Filters</li>
                     <li onClick={props.closeSideBar}>
-                        X
+                        <Anchor>
+                            <Icon name="cross_Icon"></Icon>
+                        </Anchor>
                     </li>
                 </ul>
             </nav>

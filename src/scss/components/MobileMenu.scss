@@ -23,6 +23,32 @@
         }
     }
 
+    .filters {
+        font-size: 16px;
+        @extend .semiboldmuli-family;
+        color: $dot-color;
+    }
+
+    .navigation-link {
+        font-size: 16px;
+        @extend .semiboldmuli-family;
+        color: $greyD2-color;
+    }
+
+    .left-div {
+        font-size: 16px;
+        @extend .semiboldmuli-family;
+        color: $dot-color;
+        font-weight: 600;
+    }
+
+    .right-div {
+        font-size: 16px;
+        @extend .semiboldmuli-family;
+        color: $dot-color;
+        font-weight: 600;
+    }
+
     nav {
 
         position: sticky;
@@ -71,9 +97,10 @@
         padding: 20px;
         border-top: 1px solid $greyL1-color;
 
-        .right-div{
+        .right-div {
             float: left;
         }
+
         .left-div {
             float: right;
         }

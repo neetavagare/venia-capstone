@@ -82,6 +82,7 @@ export const HeaderIcons = {
     Insta: 'insta-icon',
     Twitter: 'twitter-icon',
     more_horizantal: 'more-horizantal',
+    cross_Icon: 'cross-Icon',
 }
 
 // Shop-Bag Carousel
