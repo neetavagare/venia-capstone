@@ -70,7 +70,7 @@
         }
     }
 
-    .border_none {
+    .border-none {
         border-top: 2px solid $greyL2-color;
         border-bottom: 2px solid $greyL2-color;
         padding-bottom: 15px;
@@ -114,8 +114,4 @@
     background-color:#000000A6;
     z-index: 99999;
     cursor: pointer;
-}
-
-.mobileheader{
-    border-bottom: none;
 }

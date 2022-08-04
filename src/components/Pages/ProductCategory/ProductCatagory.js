@@ -11,12 +11,17 @@ import boys from '../../../images/Product_Images/boys.png';
 import { Image } from "../../atoms";
 import CategoryService from "../../../services/CategoryService/CategoryService";
 import { useParams } from 'react-router-dom';
+import SideBar from '../../atoms/SideBar/SideBar';
 
 function ProductCatagory(props) {
 
   let pageSize = 5;
   let [showPagination, setShowPagination] = useState(true);
   const { category } = useParams();
+
+  let [isVisible, setIsVisible] = useState(false);
+
+
 
   useEffect(() => {
 
@@ -101,6 +106,10 @@ function ProductCatagory(props) {
     }
 
     setShowPagination(true);
+    if (isVisible) {
+      closeSideBar();
+    }
+
   }
 
 
@@ -124,7 +133,15 @@ function ProductCatagory(props) {
 
   let data = props.sortedProducts.length > 0 ? props.sortedProducts : props.products
 
+  const closeSideBar = () => {
+    setIsVisible(!isVisible);
+  }
+
   return <React.Fragment>
+    {
+      isVisible &&
+      <SideBar closeSideBar={closeSideBar} handleClick={searchByCategory}></SideBar>
+    }
     <div className="aem-Grid aem-Grid--12">
       <div className="aem-Grid aem-Grid--12 aem-GridColumn--phone--4 boximg">
         <div className="desktop-hide">
@@ -150,7 +167,7 @@ function ProductCatagory(props) {
     </div>
     <div className="page-container category-container">
       <Loader isLoading={props.isLoading}></Loader>
-      <ProductListing data={data} sortByCategory={sortByCategory} categories={props.categories} handleClick={searchByCategory}></ProductListing>
+      <ProductListing data={data} filterOption={closeSideBar} sortByCategory={sortByCategory} categories={props.categories} handleClick={searchByCategory}></ProductListing>
       {
         showPagination &&
         <Pagination totalItem={totalItem} paginate={paginate}></Pagination>

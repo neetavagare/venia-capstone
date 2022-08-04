@@ -1,8 +1,6 @@
 import { CategoriesFilter } from "../../../config/Constant";
 import CheckBox from "../CheckBox/CheckBox";
 import React from "react";
-import Button from "../Button/Button";
-
 
 const SideBar = (props) => {
 
@@ -13,25 +11,22 @@ const SideBar = (props) => {
                 <ul>
                     <li className="filters">Filters</li>
                     <li onClick={props.closeSideBar}>
-                        {/* <img src={closeIcon} alt="close_icon" /> */}
                         X
                     </li>
                 </ul>
-
-
             </nav>
             <div className="clear-all">
                 <a className="clear-all-text">Clear all</a>
             </div>
             <div className="filter-container">
 
-                <div className="border_none">
+                <div className="border-none productFilters">
                     <h6 className="sidebar-catagory">Categories</h6>
                     {
                         CategoriesFilter.map((item, index) => {
                             return <React.Fragment key={"ch" + index}>
                                 <div>
-                                    <CheckBox type="checkbox" text={item.text} value={item.text} />
+                                    <CheckBox type="checkbox" text={item.text} value={item.value} />
                                 </div>
 
                             </React.Fragment>
@@ -40,7 +35,7 @@ const SideBar = (props) => {
                 </div>
             </div>
             <div className="button-action">
-                <Button classValue="results-17"> See 17 Results</Button>
+                <button className="results-17" onClick={props.handleClick} > Filter</button>
             </div>
         </aside>
     </>)

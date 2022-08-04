@@ -6,7 +6,7 @@ import { Image } from "../atoms";
 import { Anchor } from '../atoms';
 import { connect } from "react-redux";
 import { useState } from "react";
-import SideBar from "../atoms/SideBar/SideBar";
+import MobileMenu from "../atoms/SideBar/MobileMenu";
 
 // Mobile Banner Row.
 function MobileHeader(props) {
@@ -21,7 +21,7 @@ function MobileHeader(props) {
         <header className='aem-Grid aem-Grid--4  aem-GridColumn--tablet--12 desktop-hide mobileheader'>
             {
                 isVisible &&
-                <SideBar closeSideBar={closeSideBar}></SideBar>
+                <MobileMenu closeSideBar={closeSideBar}></MobileMenu>
             }
 
             <div className="aem-GridColumn aem-GridColumn--phone--1 menu">

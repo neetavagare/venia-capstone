@@ -172,6 +172,9 @@
         margin-left: 14px;
     }
 
+    .image-gallery-content.left .image-gallery-slide .image-gallery-image, .image-gallery-content.right .image-gallery-slide .image-gallery-image{
+        max-height: 80vh;
+    }
 }
 
 .productdescribe {

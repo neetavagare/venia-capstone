@@ -20,15 +20,15 @@ export default function ProductListing(props) {
                 </div>
                 <div className="aem-Grid aem-Grid--4 desktop-hide mobile-view">
                     <div className="aem-GridColumn aem-GridColumn--phone--2 slider">
-                        <Anchor><Icon name="slider"> </Icon></Anchor>
-                        <Anchor href="" classValue="slidertext"
+                        <Anchor onChange={props.filterOption ? props.filterOption : null}><Icon name="slider" > </Icon></Anchor>
+                        <Anchor onChange={props.filterOption ? props.filterOption : null} classValue="slidertext"
                             name='Filter Results'
                         ></Anchor>
                     </div>
                     <div className="aem-GridColumn aem-GridColumn--phone--2 updownarrow cursor-pointer">
-                        <Anchor><Icon name="uparrow"> </Icon></Anchor>
-                        <Anchor><Icon name="down-arrow"> </Icon></Anchor>
-                        <Anchor href="" className="sorttext" name='Sort Product'></Anchor>
+                        <Anchor onChange={props.sortByCategory}><Icon name="uparrow"> </Icon></Anchor>
+                        <Anchor onChange={props.sortByCategory}><Icon name="down-arrow"> </Icon></Anchor>
+                        <Anchor onChange={props.sortByCategory} href="" className="sorttext" name='Sort Product'></Anchor>
                     </div>
                 </div>
                 <div className="aem-Grid aem-Grid--12 catagory">
