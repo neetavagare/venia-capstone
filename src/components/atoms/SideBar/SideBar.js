@@ -7,6 +7,7 @@ import Button from "../Button/Button";
 const SideBar = (props) => {
 
     return (<>
+        <div className="side-bar-overlay"></div>
         <aside className="side-bar productFilters">
             <nav>
                 <ul>
@@ -20,7 +21,7 @@ const SideBar = (props) => {
 
             </nav>
             <div className="clear-all">
-                <a href="">Clear all</a>
+                <a className="clear-all-text">Clear all</a>
             </div>
             <div className="filter-container">
 
