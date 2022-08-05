@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Icon from "../atoms/Icon/Icon";
 import mobilevenia from '../../images/Product_Images/mobilevenia.png'
 import { Link } from 'react-router-dom';
@@ -7,21 +7,28 @@ import { Anchor } from '../atoms';
 import { connect } from "react-redux";
 import { useState } from "react";
 import MobileMenu from "../atoms/SideBar/MobileMenu";
+import { useNavigate } from 'react-router-dom'
 
 // Mobile Banner Row.
 function MobileHeader(props) {
-
     const [isVisible, setVisible] = useState(false);
 
     const closeSideBar = () => {
         setVisible(!isVisible);
     }
 
+    let navigate = useNavigate();
+
+    const handleClick = (element) => {
+        let url =  element.currentTarget.getAttribute('data-url');
+        navigate(url , { replace: true });
+        closeSideBar();
+    }
     return (
         <header className='aem-Grid aem-Grid--4  aem-GridColumn--tablet--12 desktop-hide mobileheader'>
             {
                 isVisible &&
-                <MobileMenu closeSideBar={closeSideBar}></MobileMenu>
+                <MobileMenu closeSideBar={closeSideBar} navigate={handleClick}></MobileMenu>
             }
 
             <div className="aem-GridColumn aem-GridColumn--phone--1 menu">

@@ -1,6 +1,5 @@
-import { CategoriesFilter } from "../../../config/Constant";
+import { HeaderLabels } from "../../../config/Constant";
 import React from "react";
-import AnchorV2 from "../AnchorV2/AnchorV2";
 import Anchor from "../Anchor/Anchor";
 import Icon from "../Icon/Icon";
 
@@ -18,10 +17,10 @@ const MobileMenu = (props) => {
             </nav>
             <div className="menu-container">
                 {
-                    CategoriesFilter.map((item, index) => {
+                    HeaderLabels.manuItems.map((item, index) => {
                         return <React.Fragment key={"ch" + index}>
                             <div className="navigation-link">
-                                <AnchorV2 href={"#"}> {item.text}</AnchorV2>
+                                <a  className="cursor-pointer" onClick={props.navigate} data-url={item.url}> {item.label}</a>
                             </div>
 
                         </React.Fragment>
