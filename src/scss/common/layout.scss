@@ -455,8 +455,13 @@ body {
         }
     }
 
-    .order-succes-section .order-number {
-        padding-bottom: 30px;
+    .order-succes-section {
+        .order-number {
+            padding-bottom: 30px;
+        }
+        .mobile-hide{
+            display: none;
+        }
     }
 
     .home-page-slider-container {
