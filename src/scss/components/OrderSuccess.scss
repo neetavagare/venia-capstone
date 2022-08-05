@@ -63,8 +63,9 @@
     }
 
     .add-cart {
-        width: 440px;
-        height: 351px;
+        display: flex;
+        padding: 42px;
+        flex-direction: column;
         background-color: $primary-D1;
         border: 1px solid $border-color;
         border-radius: 2px;
@@ -74,18 +75,20 @@
             font-size: 36px;
             color: $white-color;
             margin: auto;
-            padding: 0 25px;
+            padding: 0 21px;
         }
 
         .add-cart-text {
             @extend .semiboldsource-family;
             font-size: 36px;
             color: $white-color;
-            padding: 42px;
+            padding: 7px;
         }
 
         .add-cart-icon {
-            padding: 24px 83px;
+            text-align: center;
+            padding: 10px;
+            padding-left: 0;
 
             .facebook-icon {
                 margin-left: 20px;

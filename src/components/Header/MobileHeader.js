@@ -23,6 +23,7 @@ function MobileHeader(props) {
         let url =  element.currentTarget.getAttribute('data-url');
         navigate(url , { replace: true });
         closeSideBar();
+        console.log("test message");
     }
     return (
         <header className='aem-Grid aem-Grid--4  aem-GridColumn--tablet--12 desktop-hide mobileheader'>
